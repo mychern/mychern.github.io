@@ -47,6 +47,9 @@ pre { margin: 1ex; padding: 1ex; }
   margin-right: 40px;
   width: 160px;
   flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
 }
 
 .monospace {

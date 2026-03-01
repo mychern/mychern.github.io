@@ -26,8 +26,8 @@
           <div class="nav-item active-nav-item"><a href="#about">About</a></div>
           <div class="nav-item"><a href="#research">Research</a></div>
           <div class="nav-item"><a href="#teaching">Teaching</a></div>
-          <div class="nav-item"><a href="#work">Work</a></div>
-          <div class="nav-item"><a href="#awards">Awards</a></div>
+          <div class="nav-item"><a href="#work">Industry</a></div>
+          <div class="nav-item"><a href="#awards">Recognitions</a></div>
           <div class="nav-item"><a href="#misc">Misc</a></div>
         </div>
       </div>
@@ -327,7 +327,7 @@
         <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;" />
 
         <!-- Work -->
-        <h2 id="work">Work Experience</h2>
+        <h2 id="work">Industry</h2>
 
         <div class="internship">
           <div class="left">
@@ -374,13 +374,13 @@
         <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;" />
 
         <!-- Awards -->
-        <h2 id="awards">Awards</h2>
+        <h2 id="awards">Recognitions</h2>
 
         <h3>College</h3>
         <ul>
           <li><strong>Google MLthon (for interns) Finalist</strong></li>
-          <li><strong>Yale Sterling Prize Fellowship</strong> (for first-year PhD admits)</li>
-          <li><strong>UW CS Departmental Fellowship</strong> (for first-year PhD admits)</li>
+          <li><strong>Yale Sterling Prize Fellowship</strong> (for top 5 first-year PhD admits)</li>
+          <li><strong>UW CS Departmental Fellowship</strong> (for top first-year PhD admits)</li>
           <li><strong>Putnam Competition</strong> &mdash; Score of 21, ranked ~769 (2023)</li>
         </ul>
 
@@ -406,7 +406,7 @@
           </li>
           <li><strong>AIME Qualifier</strong></li>
           <li>
-            <strong>Johns Hopkins <a href="https://apply.jhu.edu/tuition-aid/types-of-financial-aid/need-based-scholarships/hodson-scholars/" target="_blank">Hodson Trust Scholar</a></strong> (for first-year undergrad admits) &mdash;
+            <strong>Johns Hopkins <a href="https://apply.jhu.edu/tuition-aid/types-of-financial-aid/need-based-scholarships/hodson-scholars/" target="_blank">Hodson Trust Scholar</a></strong> (for top 20 first-year undergrad admits) &mdash;
             $156,000 scholarship over four years
           </li>
           <li>
@@ -414,31 +414,9 @@
               <a href="https://curf.upenn.edu/scholars-programs/benjamin-franklin-scholars" target="_blank"
                 >Ben Franklin Scholar</a
               ></strong>
-            (for first-year undergrad admits)
+            (for top first-year undergrad admits)
           </li>
         </ul>
-
-        <h3>Relevant Coursework</h3>
-
-        <h4>Undergrad</h4>
-        <p>
-          <em>CS &mdash; Theory:</em> Advanced Cryptography (intersecting TFNP), Intro to
-          Cryptography, Unconditional Lower Bounds &amp; Derandomization, Computational
-          Complexity, Analysis of Algorithms, Quantum Computing.
-        </p>
-        <p>
-          <em>CS &mdash; Systems:</em> Distributed Systems, Computer Networks, Competitive
-          Programming, Blockchain, Databases, Systems Programming, Data Structures.
-        </p>
-        <p>
-          <em>Mathematics:</em> Modern Analysis I&amp;II, Modern Algebra I&amp;II,
-          Functions of Complex Variables, Topology.
-        </p>
-        <p>
-          <em>Physics:</em> Accelerated Intro to Physics I&amp;II (Kleppner &amp;
-          Kolenkow for Mechanics; Purcell &amp; Morin for E&amp;M; quantum mechanics
-          via A.&nbsp;P. French).
-        </p>
 
         <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;" />
 
@@ -476,9 +454,58 @@
           I'm fluent in English and Mandarin, took Latin to AP level, and am currently
           learning French and Russian.
         </p>
+
+        <h3>Relevant Coursework</h3>
+
+        <h4>Undergrad</h4>
+        <p>
+          <em>CS &mdash; Theory:</em> Advanced Cryptography (intersecting TFNP), Intro to
+          Cryptography, Unconditional Lower Bounds &amp; Derandomization, Computational
+          Complexity, Analysis of Algorithms, Quantum Computing.
+        </p>
+        <p>
+          <em>CS &mdash; Systems:</em> Distributed Systems, Computer Networks, Competitive
+          Programming, Blockchain, Databases, Systems Programming, Data Structures.
+        </p>
+        <p>
+          <em>Mathematics:</em> Modern Analysis I&amp;II, Modern Algebra I&amp;II,
+          Functions of Complex Variables, Topology.
+        </p>
+        <p>
+          <em>Physics:</em> Accelerated Intro to Physics I&amp;II (Kleppner &amp;
+          Kolenkow for Mechanics; Purcell &amp; Morin for E&amp;M; quantum mechanics
+          via A.&nbsp;P. French).
+        </p>
         <!-- <p><a href="appreciation/some-appreciations.html">Some appreciations.</a></p> -->
 
       </div><!-- .content -->
     </div><!-- .page-container -->
+    <script>
+      const sections = ['about','research','teaching','work','awards','misc'];
+      const navItems = {};
+      sections.forEach(id => {
+        navItems[id] = document.querySelector(`.nav-item a[href="#${id}"]`).parentElement;
+      });
+
+      function updateActive() {
+        const nearBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - window.innerHeight * 0.1;
+        if (nearBottom) {
+          sections.forEach(id => navItems[id].classList.remove('active-nav-item'));
+          navItems['misc'].classList.add('active-nav-item');
+          return;
+        }
+        let current = sections[0];
+        for (const id of sections) {
+          if (document.getElementById(id).getBoundingClientRect().top <= 80) {
+            current = id;
+          }
+        }
+        sections.forEach(id => navItems[id].classList.remove('active-nav-item'));
+        navItems[current].classList.add('active-nav-item');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    </script>
   </body>
 </html>
