@@ -9,6 +9,7 @@ body {
   text-rendering: optimizeLegibility;
   font-size: 16px;
   color: #494e52;
+  background-color: #faf8f5;
 }
 
 a { text-decoration: none; color: #8C1515; }
@@ -50,6 +51,7 @@ pre { margin: 1ex; padding: 1ex; }
   position: sticky;
   top: 20px;
   align-self: flex-start;
+  background-color: #faf8f5;
 }
 
 .monospace {
@@ -77,7 +79,7 @@ pre { margin: 1ex; padding: 1ex; }
   margin: 2px 0;
   padding-right: 5px;
   transition: border-color 0.5s;
-  border-right: 4px solid #fff;
+  border-right: 4px solid #faf8f5;
 }
 
 .sidebar .nav-items .nav-item:hover {
@@ -252,11 +254,11 @@ li { margin-bottom: 6px; }
 
 @media (max-width: 680px) {
   .page-container { flex-direction: column; }
-  .sidebar { width: 100%; align-items: flex-start; margin-right: 0; margin-bottom: 24px; }
+  .sidebar { width: 100%; align-items: flex-start; margin-right: 0; margin-bottom: 24px; top: 0; padding-top: 10px; }
   .sidebar .nav-items { flex-direction: row; flex-wrap: wrap; width: 100%; }
   .sidebar .nav-items .nav-item {
     border-right: none;
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid #faf8f5;
     padding: 0 8px 2px;
   }
   .sidebar .nav-items .nav-item:hover { border-bottom-color: #00ba0f; }
