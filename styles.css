@@ -11,7 +11,7 @@ body {
   color: #494e52;
 }
 
-a { text-decoration: none; color: #077cd2; }
+a { text-decoration: none; color: #8C1515; }
 a:hover { text-decoration: underline; }
 
 h2, h3 {
@@ -117,7 +117,6 @@ div.paper div.title {
 }
 
 div.paper div.title a {
-  color: inherit;
 }
 
 div.paper div.authors-and-venue {
