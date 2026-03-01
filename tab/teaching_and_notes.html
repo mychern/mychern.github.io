@@ -1,182 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="google-site-verification"
       content="xvD194KsBxeaW40tr48z5nGiEF-zbgEgpTNHhK2AMu8"
     />
-    <title>Teaching & Miscellaneous Notes</title>
+    <title>Teaching &mdash; Mark Chen</title>
+    <link rel="stylesheet" href="../styles.css" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script
       id="MathJax-script"
       async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
-    <link rel="stylesheet" href="../styles.css" />
   </head>
+  <body>
+    <div class="page-container">
 
-  <html>
-    <body>
-      <h1>Mark Chen</h1>
-
-      <div style="text-align: center">
-        <a href="../index.html">About Me</a> |
-        <a href="research_and_projects.html">Research</a> |
-        <a href="teaching_and_notes.html">Teaching & Miscellaneous Notes</a> |
-        <a href="work_experience.html">Work Experience</a> |
-        <a href="at_school.html">At School (Courseworks, Awards, etc)</a>
-        <!-- |
-        <a href="../appreciation/some-appreciations.html">Appreciations</a> -->
-        <br />
+      <div class="sidebar">
+        <div class="name monospace">Mark Chen</div>
+        <div class="nav-items monospace">
+          <div class="nav-item"><a href="../index.html#about">About</a></div>
+          <div class="nav-item"><a href="../index.html#research">Research</a></div>
+          <div class="nav-item active-nav-item"><a href="../index.html#teaching">Teaching</a></div>
+          <div class="nav-item"><a href="../index.html#work">Work</a></div>
+          <div class="nav-item"><a href="../index.html#awards">Awards</a></div>
+          <div class="nav-item"><a href="../index.html#misc">Misc</a></div>
+        </div>
       </div>
 
-      <h2 id="teaching">Teaching-Related Experiences</h2>
-      <h3>Teaching Assistant (TA)</h3>
-      Duties include holding weekly office hourse, grading, and occasionally
-      making homework or exam questions.
-      <h4>At Columbia</h4>
-      <ul>
-        <li>
-          Introduction to Computational Complexity (COMS 4236) taught by Henry
-          Yuen (Fall 2023).
-        </li>
-        <li>
-          Analysis of Algorithms (COMS 4231) taught by Tim Roughgarden (Fall
-          2023).
-        </li>
-      </ul>
+      <div class="content">
 
-      <h3>Seminars & Talks</h3>
-      <ul>
-        <li>
-          <b>(Spring 2024) Quantum Complexity Theory</b>
-          (co-organized a semester-long weekly seminar given by a graduate
-          student with Columbia Undergraduate Learning Seminar in Theoretical
-          Computer Science):
-          <a
-            href="../notes/24sp-tcs-quantum/24sp-tcs-quantum.html"
-            target="_blank"
-            >homepage</a
-          >.
-        </li>
-        <li>(Columbia Math Directed Reading Program)</li>
-      </ul>
-      <hr />
+        <h2 id="teaching">Teaching</h2>
 
-      <h2 id="teaching">Student Group Talks Given</h2>
-      <ul>
-        <li>
-          <b>(Fall 2025) A Tasting of Interactive Proof Systems:</b> NOTES COMING...
-        </li>
-        <li>
-          <b>(Spring 2025) Property testing:</b> NOTES COMING...
-        </li>
-        <li>
-          <b>(Summer 2024) Differential Privacy:</b> The entire 6 talks, based on Prof. Gautam Kamath's class.
-        </li>
-        <li>
-          <b>(Spring 2024) Quantum Complexity Theory:</b>
-          <a
-            href="https://drive.google.com/file/d/1N48GSYH_GH9y0GExs9dJc2k1tk4APkoc/view"
-            target="_blank"
-            >talk 1 on definitions and overview</a
-          >,
-          <a
-            href="../notes/24sp-tcs-quantum/notes/QMA, Local-Hamiltonian, and Beyond.pdf"
-            target="_blank"
-            >talk 6 on QMA and Local Hamiltonian Problems (Co-Presented with
-            Andrew Yang)</a
-          >.
-        </li>
-        <li>
-          <b>(Spring 2024) Cryptography \(\cap\) TFNP:</b>
-          <ul>
-            <li>
-              <a
-                href="../notes/24sp-coms-6261/TFNP_Hardness_Talk.pdf"
-                target="_blank"
-                >Presentation</a
-              >
-              (co-presented with Akshat Yaparla) about the BPR paper "<a
-                href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITCS.2017.60"
-                target="_blank"
-                >The Journey from NP to TFNP Hardness</a
-              >".
-            </li>
-            <li>
-              <a
-                href="../notes/24sp-coms-6261/BPR Presentation v.ff.pdf"
-                target="_blank"
-                >Presentation</a
-              >
-              (as the presenter, with support from
-              <a href="https://about.yizhihuang.org/" target="_blank"
-                >Yizhi Huang</a
-              >) about the BPR paper "<a
-                href="https://eprint.iacr.org/2014/1029.pdf"
-                target="_blank"
-                >On the Cryptographic Hardness of Finding Nash Equilibrium</a
-              >".
-            </li>
-          </ul>
-        </li>
-        <li>
-          <b>(Spring 2024) Quantum Information Theory:</b> A two-hour
-          <a
-            href="../notes/24sp-math-3952/talk/QMA_and_Local_Hamiltonian.pdf"
-            target="_blank"
-            >talk</a
-          >
-          from different levels of interactive proof systems to quantum
-          cryptography.
-        </li>
-      </ul>
-      <hr />
+        <h3>Teaching Assistant</h3>
+        <p><em>Duties include weekly office hours, grading, and occasionally contributing homework or exam questions.</em></p>
 
-      <h2 id="teaching">Programs</h2>
-      <ul>
-        <li>
-          <b>Center for Smart Streetscapes (CS3) Summer High School Program</b>
-          <a
-            href="../talks/Session 8_ Slides.pdf"
-            target="_blank"
-            >Why and how Cookie Monster tackles the ads attribution problem?</a
-          >.
-        </li>
-      </ul>
-      <hr />
+        <div class="teaching">
+          <div class="left">
+            <div class="role">TA</div>
+            <div class="year">Spring 2026</div>
+          </div>
+          <div class="right">
+            <div class="class">Intro to Cryptography (COMS 3262)</div>
+            <div class="detail">Columbia University &mdash; expected enrollment: 30+ students</div>
+          </div>
+        </div>
 
-      <h2 id="teaching">Typed Notes</h2>
-      <ul>
-        <li>
-          <b
-            >(Spring 2024) COMS 6998 Unconditional Lower Bounds and
-            Derandomization</b
-          >:
-          <a href="../notes/24sp-coms-6998/20240213lec5.pdf" target="_blank"
-            >week 5 on Håstad's Switching Lemma & \(\mathbb{F}_2\)
-            Polynomials</a
-          >,
-          <a href="../notes/24sp-coms-6998/20240213lec8.pdf" target="_blank"
-            >week 8 on Fourier Analysis on Boolean Functions, Sandwiching
-            Approximator & Viola's Theorem</a
-          >.
-        </li>
-        <li>
-          <b>(Spring 2024) MATH 3952 Undergraduate Math Seminar</b> (on Quantum
-          Information Theory):
-          <a href="../notes/24sp-math-3952/24sp-math-3952.html" target="_blank"
-            >full scribe notes</a
-          >.
-        </li>
-        <li>
-          <b>(Spring 2024) COMS 6261 Advanced Cryptography</b> (on TFNP):
-          <a href="../talks/TFNP Hierarchy - a Hitorical and Contextual Perspective.pdf" target="_blank"
-            >presentation</a
-          >.
-        </li>
-      </ul>
-    </body>
-  </html>
+        <div class="teaching">
+          <div class="left">
+            <div class="role">TA</div>
+            <div class="year">Spring 2026</div>
+          </div>
+          <div class="right">
+            <div class="class">Analysis of Algorithms (CSOR 4231)</div>
+            <div class="detail">Columbia University &mdash; final enrollment: 130+ students</div>
+          </div>
+        </div>
+
+        <div class="teaching">
+          <div class="left">
+            <div class="role">TA</div>
+            <div class="year">Fall 2023</div>
+          </div>
+          <div class="right">
+            <div class="class">Introduction to Computational Complexity (COMS 4236)</div>
+            <div class="detail">Columbia University &mdash; final enrollment: 30+ students</div>
+          </div>
+        </div>
+
+        <div class="teaching">
+          <div class="left">
+            <div class="role">TA</div>
+            <div class="year">Fall 2023</div>
+          </div>
+          <div class="right">
+            <div class="class">Analysis of Algorithms (COMS 4231)</div>
+            <div class="detail">Columbia University &mdash; final enrollment: 110+ students</div>
+          </div>
+        </div>
+
+        <h3>Seminars &amp; Talks Given</h3>
+        <ul>
+          <li>
+            <em>(Fall 2025)</em> A Tasting of Interactive Proof Systems &mdash;
+            <span style="color: #868f97;">notes coming soon.</span>
+          </li>
+          <li>
+            <em>(Spring 2025)</em> Property Testing &mdash;
+            <span style="color: #868f97;">notes coming soon.</span>
+          </li>
+          <li>
+            <em>(Summer 2024)</em> Differential Privacy &mdash; 6 talks based on
+            Prof. Gautam Kamath's course.
+          </li>
+          <li>
+            <em>(Spring 2024)</em> Quantum Complexity Theory &mdash;
+            <a href="https://drive.google.com/file/d/1N48GSYH_GH9y0GExs9dJc2k1tk4APkoc/view" target="_blank"
+              >talk 1 (definitions &amp; overview)</a
+            >,
+            <a href="../notes/24sp-tcs-quantum/notes/QMA, Local-Hamiltonian, and Beyond.pdf" target="_blank"
+              >talk 6 on QMA and Local Hamiltonian Problems (with Andrew Yang)</a
+            >.
+            Co-organized semester-long seminar with the Columbia Undergraduate Learning Seminar in TCS.
+          </li>
+          <li>
+            <em>(Spring 2024)</em> Cryptography &cap; TFNP &mdash;
+            <a href="../notes/24sp-coms-6261/TFNP_Hardness_Talk.pdf" target="_blank"
+              >&ldquo;The Journey from NP to TFNP Hardness&rdquo;</a
+            >
+            (with Akshat Yaparla);
+            <a href="../notes/24sp-coms-6261/BPR Presentation v.ff.pdf" target="_blank"
+              >&ldquo;Cryptographic Hardness of Finding Nash Equilibrium&rdquo;</a
+            >
+            (with <a href="https://about.yizhihuang.org/" target="_blank">Yizhi Huang</a>).
+          </li>
+          <li>
+            <em>(Spring 2024)</em> Quantum Information Theory &mdash;
+            <a href="../notes/24sp-math-3952/talk/QMA_and_Local_Hamiltonian.pdf" target="_blank"
+              >two-hour talk</a
+            >
+            from interactive proof systems to quantum cryptography.
+          </li>
+        </ul>
+
+        <h3>Typed Notes &amp; Scribing</h3>
+        <ul>
+          <li>
+            <em>(Spring 2024) COMS 6998 Unconditional Lower Bounds and Derandomization</em> &mdash;
+            <a href="../notes/24sp-coms-6998/20240213lec5.pdf" target="_blank"
+              >week 5 (Håstad's Switching Lemma &amp; \(\mathbb{F}_2\) Polynomials)</a
+            >,
+            <a href="../notes/24sp-coms-6998/20240213lec8.pdf" target="_blank"
+              >week 8 (Fourier Analysis, Sandwiching Approximator &amp; Viola's Theorem)</a
+            >
+          </li>
+          <li>
+            <em>(Spring 2024) MATH 3952 Undergraduate Math Seminar</em>
+            (Quantum Information Theory) &mdash;
+            <a href="../notes/24sp-math-3952/24sp-math-3952.html" target="_blank"
+              >full scribe notes</a
+            >
+          </li>
+          <li>
+            <em>(Spring 2024) COMS 6261 Advanced Cryptography</em> (TFNP) &mdash;
+            <a href="../talks/TFNP Hierarchy - a Hitorical and Contextual Perspective.pdf" target="_blank"
+              >presentation</a
+            >
+          </li>
+        </ul>
+
+        <h3>Programs</h3>
+        <ul>
+          <li>
+            <em>CS3 Summer High School Program</em> &mdash;
+            <a href="../talks/Session 8_ Slides.pdf" target="_blank"
+              >Why and how Cookie Monster tackles the ads attribution problem?</a
+            >
+          </li>
+          <li>Columbia Math Directed Reading Program</li>
+        </ul>
+
+      </div>
+    </div>
+  </body>
 </html>

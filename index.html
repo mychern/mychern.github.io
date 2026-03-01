@@ -1,147 +1,484 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="google-site-verification"
       content="xvD194KsBxeaW40tr48z5nGiEF-zbgEgpTNHhK2AMu8"
     />
     <title>Mark Chen</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
   </head>
+  <body>
+    <div class="page-container">
 
-  <html>
-    <body>
-      <h1>Mark Chen</h1>
-
-      <div style="text-align: center">
-        <a href="../index.html">About Me</a> |
-        <a href="tab/research_and_projects.html">Research</a> |
-        <a href="tab/teaching_and_notes.html">Teaching & Miscellaneous Notes</a> |
-        <a href="tab/work_experience.html">Work Experience</a> |
-        <a href="tab/at_school.html">At School (Courseworks, Awards, etc)</a>
-        <!-- | -->
-        <!-- <a href="appreciation/some-appreciations.html">Appreciations</a> -->
-        <br />
+      <!-- ── Sidebar ──────────────────────────────────── -->
+      <div class="sidebar">
+        <div class="name monospace">Mark Chen</div>
+        <div class="nav-items monospace">
+          <div class="nav-item active-nav-item"><a href="#about">About</a></div>
+          <div class="nav-item"><a href="#research">Research</a></div>
+          <div class="nav-item"><a href="#teaching">Teaching</a></div>
+          <div class="nav-item"><a href="#work">Work</a></div>
+          <div class="nav-item"><a href="#awards">Awards</a></div>
+          <div class="nav-item"><a href="#misc">Misc</a></div>
+        </div>
       </div>
 
-      <h2 id="about-me">About <a href="me.html">Me</a></h2>
-      <p>
-        I'm an undergraduate student in the
-        <a href="https://theory.cs.columbia.edu/">Theoretical CS at Columbia</a
-        >, anticipated to graduate in May 2026, with some exposures to math and
-        physics (<a href="tab/at_school.html">courseworks</a>). <br /><br />
-        I'm broadly interested in anything theory-related. As of now, I'm
-        actively thinking about:
-        <li>
-          Individualized differential privacy with data, query, and budget adaptivities.
-        </li>
-        <li>
-          Average-case complexity and smoothed analysis of total search problems.
-        </li>
-        Outside of theory, I worked at Google as a software engineering intern
-        as well as a few start-ups and VCs with an engineering focus (<a
-          href="tab/work_experience.html"
-          >work experience</a
-        >). <br /><br />
-        My email is yc3879-at-columbia-dot-edu.
-      </p>
+      <!-- ── Content ──────────────────────────────────── -->
+      <div class="content">
 
-      <hr />
-      <h2>Personal Constitution & Observations</h2>
-      Fundamentally, I'm driven by privacy, the pursuit of "<a
-        href="https://groups.csail.mit.edu/mac/classes/6.805/articles/privacy/Privacy_brand_warr2.html"
-        >the right to be let alone</a
-      >". My interests in cryptography, privacy, and theoretical foundations of
-      related fields are instantiations of this fundamental drive.
-      <!-- TODO: Uncomment the following section, when it's time. -->
-      <!-- There are a
-      few other, possibly controversial, observations that motivate me:
-      <li>
-        With increased geopolitical tensions in a period when we see more walls
-        built than walls taken down, it is all the more important to have ways
-        to keep collaborations going, at a level that is computationally
-        indistinsguishable from when the walls weren't built. From this, I'm
-        interested in differential privacy, FHE, and federated learning.
-      </li>
-      <li>
-        Thanks to digitalization, we are less likely to have the kind of relapse
-        of civilization that Romans had, where, for example, diseases that were
-        once treatable stopped being treatable in the mideavals. But it is still
-        possible to lose track of these important information for our
-        civiilization due to the MASSIVE amount of data floating around.
-        Efficient ways to search and find things are a must. That is why I'm
-        interested in property testing, sublinear algorithms, and quantum
-        computing.
-      </li>
-      <li>
-        Even with good information recorded, people may still not be convinced
-        of its correctness and effectiveness, and it will soon become
-        impossible, if not already, to verify everything. That is why short,
-        incrementally efficiently verifiable proofs are important. Thus, I'm
-        interested in PCP, SNARK/SNARGs, and variants of incrementally
-        verifiable proof systems (see the motivation of the original
-        <a href="https://iacr.org/archive/tcc2008/49480001/49480001.pdf"
-          >prof. Valiant's 2008 paper</a
-        >).
-      </li> -->
+        <!-- About -->
+        <h2 id="about">About Me</h2>
 
-      <hr />
+        <figure style="float: right; max-width: 185px; margin: 0 0 10px 20px;">
+          <img src="images/me-2.jpg" alt="Mark Chen" style="width: 185px; border-radius: 4px;" />
+        </figure>
 
-      <h2>My Role Model</h2>
-      Alex Honnold. <a
-        href="https://groups.csail.mit.edu/mac/classes/6.805/articles/privacy/Privacy_brand_warr2.html"
-        >My favorite moment of his</a
-      >. That is the sheer obsession I want myself to have.
+        <p>
+          I'm an undergraduate student in
+          <a href="https://theory.cs.columbia.edu/">Theoretical CS at Columbia University</a>,
+          graduating May 2026, with exposure to math and physics as well.
+        </p>
+        <p>
+          I'm broadly interested in anything theory-related. As of now, I'm actively
+          thinking about:
+        </p>
+        <ul>
+          <li>Individualized differential privacy with data, query, and budget adaptivities.</li>
+          <li>Average-case complexity and smoothed analysis of total search problems.</li>
+        </ul>
+        <p>
+          Outside of theory, I interned at Google four times as a software engineer and
+          worked at a few start-ups and VCs
+          (<a href="#work">work experience</a>).
+        </p>
+        <p>
+          Fundamentally, I'm driven by privacy — the pursuit of
+          "<a href="https://groups.csail.mit.edu/mac/classes/6.805/articles/privacy/Privacy_brand_warr2.html"
+            >the right to be let alone</a
+          >". My interests in cryptography, privacy, and the theoretical foundations of
+          related fields are instantiations of this fundamental drive.
+        </p>
 
-      <hr />
+        <h2 id="contact">Contact</h2>
+        <p>
+          Email: <span class="email"><a href="mailto:yc3879@columbia.edu">yc3879@columbia.edu</a></span><br />
+          GitHub: <a href="https://github.com/mychern" target="_blank">mychern</a><br />
+          Google Scholar: <a href="https://scholar.google.com/citations?hl=en&user=Ao4F6UYAAAAJ" target="_blank">link</a>
+        </p>
 
+        <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;" />
 
-      <h2 id="interests">Trivia</h2>
-      I spent two summers in high school painting and drawing. I still do casual
-      drawings from time to time. I also play basketball and tennis for fun,
-      though these have been hard since I came to New York... I enjoy walking
-      around, getting coffee and boba.
-      <p>
-        My great grandfather was a Chinese history scholar whom I spent a lot of
-        time with before high school. As a scholar, he was a target of the "<a
-          href="https://en.wikipedia.org/wiki/Laogai"
-          >Laogai</a
-        >" for decades. I always remember him as the knowledgeable and positive
-        man who couldn't stop talking about history in front his wall of books
-        printed from his scholarly days in 1930s/40s, survived by his hiding and
-        protection. This memory of him lives on in my habit of reading wikipedia
-        pages about Chinese history and digital records of ancient texts (<a
-          href="https://ctext.org/zhs"
-          >through this great effort!</a
-        >) all the time. For trivia, I can match most Gregorian years to their
-        corresponding Chinese era names.
-      </p>
-      <p>
-        For various reasons, I've moved around a lot through my life (mostly by
-        myself other than when I go home). Originally from Ningbo, China, I've
-        lived in, studied and/or worked at the following places for extended
-        time periods:
-        <li>
-          <b>In China:</b> Ningbo (where I grew up), Shanghai (where my mom's
-          family is), Beijing (for most of my gap year in 2020-21).
-        </li>
-        <li>
-          <b>In the U.S.:</b> Machester / Auburn, New Hampshire (for one year of
-          middle school); Bloomfield Hills, Michigan (for high school); New York
-          City, New York (for college); San Francisco Bay Area (for three
-          summers at Google).
-        </li>
-        <li>
-          <b>Others:</b> I spent a year between middle school and high school,
-          studying abroad in Aukland, New Zealand, and Paris, France.
-        </li>
-      </p>
-      <p>
-        I like languages. I'm fluent in English and Mandarin, took Latin to the
-        AP level, and am currently trying to learn French and Russian.
-      </p>
-      <hr />
-    </body>
-  </html>
+        <!-- Research -->
+        <h2 id="research">Research</h2>
+
+        <p>
+          <em>
+            By default, authors are ordered alphabetically by last name.
+            * indicates co-authors who contributed equally (also alphabetically listed).
+          </em>
+        </p>
+
+        <h3>Publications &amp; Preprints</h3>
+
+        <div class="paper">
+          <div class="title">
+            <a href="https://arxiv.org/abs/2506.05290" target="_blank">Big Bird: Privacy Budget Management for W3C's Privacy-Preserving Attribution API</a>
+          </div>
+          <div class="authors-and-venue">
+            <div class="authors">
+              With Pierre Tholoniat, Alison Caulfield*, Giorgio Cavicchioli*, Benjamin Case,
+              Asaf Cidon, Roxana Geambasu, Mathias Lécuyer, and Martin Thomson
+            </div>
+            <div class="venue">
+              <div class="venue-badge">In Submission — OSDI '26</div>
+            </div>
+          </div>
+          <ul class="notes">
+            <li>
+              A follow-up to the SOSP '24 paper
+              <a href="https://arxiv.org/abs/2405.16719" target="_blank">Cookie Monster</a>.
+            </li>
+            <li>
+              At the <a href="https://cs3-erc.org/" target="_blank">CS3</a> NSF site visit
+              day workshop, our work received unanimous top-band rating.
+            </li>
+            <li>
+              <a href="https://www.w3.org/2022/08/PROPOSED-PATWG-charter.html" target="_blank"
+                >PATWG</a
+              >
+              preliminarily approved adopting this work to their standardization, considered
+              by major browsers including Firefox and Chrome.
+            </li>
+          </ul>
+        </div>
+
+        <div class="paper">
+          <div class="title">
+            <a href="https://arxiv.org/abs/2511.04558" target="_blank">Boolean function monotonicity testing requires (almost) \(n^{1/2}\) queries</a>
+          </div>
+          <div class="authors-and-venue">
+            <div class="authors">
+              With Xi Chen, Hao Cui, William Pires, and Jonah Stockwell
+            </div>
+            <div class="venue">
+              <div class="venue-badge">STOC '26</div>
+            </div>
+          </div>
+          <div class="detail">Accepted with two &ldquo;Strong Accept&rdquo;s.</div>
+        </div>
+
+        <h3>Talks &amp; Posters</h3>
+        <ul>
+          <li>
+            <strong>[Big Bird]</strong> Evaluating Optimization Queries: Methodology and
+            Preliminary Results
+            [<a href="https://github.com/w3c/patwg/issues/60" target="_blank">PATWG issue</a>,
+            <a href="talks/[PATWG] Evaluating Optimization Queries (LLP).pdf" target="_blank">slides</a>]
+          </li>
+          <li>
+            <strong>[Ind. Sparse Vector via Target Charging]</strong> Adaptive Individual
+            Accounting with Target Charging
+            [<a href="talks/ISV Poster.pdf" target="_blank">poster</a>]
+          </li>
+          <li>
+            <strong>[Big Bird &amp; CityOS]</strong> Privacy-Preserving Architecture: From
+            W3C Standards to Smart Cities
+            [<a href="talks/[SV] Poster Cookie Monster+CityOS.pdf" target="_blank">poster</a>]
+          </li>
+          <li>
+            <strong>[Average-Case Hardness of TFNP in ROM]</strong> Proof of Sequential Work
+            / Verifiable Delay Functions in ROM
+            [<a href="talks/literature.pdf" target="_blank">typed</a>,
+            <a href="talks/literature (written) (1).pdf" target="_blank">written</a>]
+          </li>
+        </ul>
+
+        <h3>Survey Papers &amp; Class Projects</h3>
+        <ul>
+          <li>
+            <em>(Spring 2025) Proof Complexity.</em>
+            &ldquo;Equivalences between TFNP<sup>dt</sup> and Low-Level Proof Systems
+            with an example in \(\mathbb{F}_2\)-Nullstellensatz&rdquo;
+            [<a href="class-projects/Proof-Query-TFNP.pdf" target="_blank">pdf</a>]
+          </li>
+          <li>
+            <em>(Spring 2024) Unconditional Lower Bounds &amp; Derandomization.</em>
+            &ldquo;Fractional Pseudorandom Generators and Bounded Fourier Tails: A
+            Literature Review&rdquo;
+            [<a href="class-projects/Fractional_PRGs_Literature_review_Final_.pdf" target="_blank">pdf</a>]
+          </li>
+          <li>
+            <em>(Spring 2024) Unconditional Lower Bounds &amp; Derandomization.</em>
+            &ldquo;Bounding Threshold Formulas using Multiparty Communication Complexity
+            Techniques&rdquo;
+            [<a href="class-projects/Bounding THR.pdf" target="_blank">pdf</a>]
+          </li>
+          <li>
+            <em>(Spring 2024) Advanced Cryptography.</em>
+            &ldquo;Path to a New Secure Reinforcement Learning Model — Explicit
+            Construction as an IP and Cryptographic Implications&rdquo;
+            [<a href="class-projects/TFNP comes to RL.pdf" target="_blank">pdf</a>]
+          </li>
+        </ul>
+
+        <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;" />
+
+        <!-- Teaching -->
+        <h2 id="teaching">Teaching</h2>
+
+        <h3>Teaching Assistant</h3>
+        <p><em>Duties include weekly office hours, grading, and occasionally contributing homework or exam questions.</em></p>
+
+        <div class="teaching">
+          <div class="left">
+            <div class="role">TA</div>
+            <div class="year">Spring 2026</div>
+          </div>
+          <div class="right">
+            <div class="class">Intro to Cryptography (COMS 3262)</div>
+            <div class="detail">Columbia University &mdash; expected enrollment: 30+ students</div>
+          </div>
+        </div>
+
+        <div class="teaching">
+          <div class="left">
+            <div class="role">TA</div>
+            <div class="year">Spring 2026</div>
+          </div>
+          <div class="right">
+            <div class="class">Analysis of Algorithms (CSOR 4231)</div>
+            <div class="detail">Columbia University &mdash; final enrollment: 130+ students</div>
+          </div>
+        </div>
+
+        <div class="teaching">
+          <div class="left">
+            <div class="role">TA</div>
+            <div class="year">Fall 2023</div>
+          </div>
+          <div class="right">
+            <div class="class">Introduction to Computational Complexity (COMS 4236)</div>
+            <div class="detail">Columbia University &mdash; final enrollment: 30+ students</div>
+          </div>
+        </div>
+
+        <div class="teaching">
+          <div class="left">
+            <div class="role">TA</div>
+            <div class="year">Fall 2023</div>
+          </div>
+          <div class="right">
+            <div class="class">Analysis of Algorithms (COMS 4231)</div>
+            <div class="detail">Columbia University &mdash; final enrollment: 110+ students</div>
+          </div>
+        </div>
+
+        <h3>Seminars &amp; Talks Given</h3>
+        <ul>
+          <li>
+            <em>(Fall 2025)</em> A Tasting of Interactive Proof Systems &mdash;
+            <span style="color: #868f97;">notes coming soon.</span>
+          </li>
+          <li>
+            <em>(Spring 2025)</em> Property Testing &mdash;
+            <span style="color: #868f97;">notes coming soon.</span>
+          </li>
+          <li>
+            <em>(Summer 2024)</em> Differential Privacy &mdash; 6 talks based on
+            Prof. Gautam Kamath's course.
+          </li>
+          <li>
+            <em>(Spring 2024)</em> Quantum Complexity Theory &mdash;
+            <a href="https://drive.google.com/file/d/1N48GSYH_GH9y0GExs9dJc2k1tk4APkoc/view" target="_blank"
+              >talk 1 (definitions &amp; overview)</a
+            >,
+            <a href="notes/24sp-tcs-quantum/notes/QMA, Local-Hamiltonian, and Beyond.pdf" target="_blank"
+              >talk 6 on QMA and Local Hamiltonian Problems (with Andrew Yang)</a
+            >.
+            Co-organized semester-long seminar with the Columbia Undergraduate Learning
+            Seminar in TCS.
+          </li>
+          <li>
+            <em>(Spring 2024)</em> Cryptography &cap; TFNP &mdash;
+            <a href="notes/24sp-coms-6261/TFNP_Hardness_Talk.pdf" target="_blank"
+              >&ldquo;The Journey from NP to TFNP Hardness&rdquo;</a
+            >
+            (with Akshat Yaparla);
+            <a href="notes/24sp-coms-6261/BPR Presentation v.ff.pdf" target="_blank"
+              >&ldquo;Cryptographic Hardness of Finding Nash Equilibrium&rdquo;</a
+            >
+            (with <a href="https://about.yizhihuang.org/" target="_blank">Yizhi Huang</a>).
+          </li>
+          <li>
+            <em>(Spring 2024)</em> Quantum Information Theory &mdash;
+            <a href="notes/24sp-math-3952/talk/QMA_and_Local_Hamiltonian.pdf" target="_blank"
+              >two-hour talk</a
+            >
+            from interactive proof systems to quantum cryptography.
+          </li>
+        </ul>
+
+        <h3>Typed Notes &amp; Scribing</h3>
+        <ul>
+          <li>
+            <em>(Spring 2024) COMS 6998 Unconditional Lower Bounds and Derandomization</em> &mdash;
+            <a href="notes/24sp-coms-6998/20240213lec5.pdf" target="_blank"
+              >week 5 (Håstad's Switching Lemma &amp; \(\mathbb{F}_2\) Polynomials)</a
+            >,
+            <a href="notes/24sp-coms-6998/20240213lec8.pdf" target="_blank"
+              >week 8 (Fourier Analysis, Sandwiching Approximator &amp; Viola's Theorem)</a
+            >
+          </li>
+          <li>
+            <em>(Spring 2024) MATH 3952 Undergraduate Math Seminar</em> (Quantum Information
+            Theory) &mdash;
+            <a href="notes/24sp-math-3952/24sp-math-3952.html" target="_blank"
+              >full scribe notes</a
+            >
+          </li>
+          <li>
+            <em>(Spring 2024) COMS 6261 Advanced Cryptography</em> (TFNP) &mdash;
+            <a href="talks/TFNP Hierarchy - a Hitorical and Contextual Perspective.pdf" target="_blank"
+              >presentation</a
+            >
+          </li>
+        </ul>
+
+        <h3>Programs</h3>
+        <ul>
+          <li>
+            <em>CS3 Summer High School Program</em> &mdash;
+            <a href="talks/Session 8_ Slides.pdf" target="_blank"
+              >Why and how Cookie Monster tackles the ads attribution problem?</a
+            >
+          </li>
+          <li>Columbia Math Directed Reading Program</li>
+        </ul>
+
+        <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;" />
+
+        <!-- Work -->
+        <h2 id="work">Work Experience</h2>
+
+        <div class="internship">
+          <div class="left">
+            <div>Google</div>
+            <div class="year">4&times; intern</div>
+          </div>
+          <div class="right">
+            <p>
+              <strong>Summer 2025</strong> &mdash; Google Ads Privacy and Data Governance (APDG).
+              Built data and interactive feedback pipelines to automate privacy documentation
+              writing and review processes using experimental fine-tuned Gemini APIs.
+            </p>
+            <p>
+              <strong>Summer 2024</strong> &mdash; YouTube Nitrate Pay-gated Content Recommendation.
+              Data pipeline construction and fine-tuning ML models for content recommendations.
+            </p>
+            <p>
+              <strong>Summer 2023</strong> &mdash; Over-the-Top (OTT) Platform Service.
+              Wrote an end-to-end DVR testing system for streaming services, reducing
+              bug detection time from days to hours.
+            </p>
+            <p>
+              <strong>Summer 2022</strong> &mdash; YouTube Commerce Payments Backend.
+              Wrote RPC server features for non-recurring plan listing and fulfillment.
+            </p>
+          </div>
+        </div>
+
+        <div class="internship">
+          <div class="left">
+            <div>VC / Finance</div>
+            <div class="year">2020&ndash;2021</div>
+          </div>
+          <div class="right">
+            <p>
+              Gap year working on tech-focused early-stage investments at
+              Nantucket (Summer 2021), ZhenFund (Spring 2021), K2VC (Fall 2020),
+              and Ivy Capital (Summer 2020). Built a portfolio management
+              visualization tool (JavaScript) and a market research scraper (Python).
+            </p>
+          </div>
+        </div>
+
+        <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;" />
+
+        <!-- Awards -->
+        <h2 id="awards">Awards</h2>
+
+        <h3>College</h3>
+        <ul>
+          <li><strong>Google MLthon (for interns) Finalist</strong></li>
+          <li><strong>Yale Sterling Prize Fellowship</strong> (for first-year PhD admits)</li>
+          <li><strong>UW CS Departmental Fellowship</strong> (for first-year PhD admits)</li>
+          <li><strong>Putnam Competition</strong> &mdash; Score of 21, ranked ~769 (2023)</li>
+        </ul>
+
+        <h3>High School</h3>
+        <ul>
+          <li>
+            <strong>Regeneron Science Talent Search 2020 Scholar</strong>
+            [<a href="https://arxiv.org/pdf/2001.08075.pdf" target="_blank">arXiv</a>]
+          </li>
+          <li>
+            <strong>Shing-Tung Yau High School Science Awards</strong> &mdash;
+            North America Regional 1st Prize; <a href="https://ymsc.tsinghua.edu.cn/en/info/1024/1166.htm" target="_blank">Global Honorable Mention (Top 10) in CS</a>, 2018
+            [<a href="https://arxiv.org/pdf/2001.08075.pdf" target="_blank">arXiv</a>]
+          </li>
+          <li>
+            <strong>Michigan SEFMD, 2019</strong> &mdash; State Second Prize in Engineering;
+            First in Engineering Mechanics Category
+            [<a href="https://arxiv.org/pdf/2001.08075.pdf" target="_blank">arXiv</a>]
+          </li>
+          <li>
+            <strong>Michigan SEFMD, 2018</strong> &mdash; Category Honorable Mention
+            [<a href="https://www.scirp.org/pdf/JBiSE_2018052914441283.pdf" target="_blank">JBiSE</a>]
+          </li>
+          <li><strong>AIME Qualifier</strong></li>
+          <li>
+            <strong>Johns Hopkins <a href="https://apply.jhu.edu/tuition-aid/types-of-financial-aid/need-based-scholarships/hodson-scholars/" target="_blank">Hodson Trust Scholar</a></strong> (for first-year undergrad admits) &mdash;
+            $156,000 scholarship over four years
+          </li>
+          <li>
+            <strong>UPenn
+              <a href="https://curf.upenn.edu/scholars-programs/benjamin-franklin-scholars" target="_blank"
+                >Ben Franklin Scholar</a
+              ></strong>
+            (for first-year undergrad admits)
+          </li>
+        </ul>
+
+        <h3>Relevant Coursework</h3>
+
+        <h4>Undergrad</h4>
+        <p>
+          <em>CS &mdash; Theory:</em> Advanced Cryptography (intersecting TFNP), Intro to
+          Cryptography, Unconditional Lower Bounds &amp; Derandomization, Computational
+          Complexity, Analysis of Algorithms, Quantum Computing.
+        </p>
+        <p>
+          <em>CS &mdash; Systems:</em> Distributed Systems, Computer Networks, Competitive
+          Programming, Blockchain, Databases, Systems Programming, Data Structures.
+        </p>
+        <p>
+          <em>Mathematics:</em> Modern Analysis I&amp;II, Modern Algebra I&amp;II,
+          Functions of Complex Variables, Topology.
+        </p>
+        <p>
+          <em>Physics:</em> Accelerated Intro to Physics I&amp;II (Kleppner &amp;
+          Kolenkow for Mechanics; Purcell &amp; Morin for E&amp;M; quantum mechanics
+          via A.&nbsp;P. French).
+        </p>
+
+        <hr style="margin: 2em 0; border: none; border-top: 1px solid #ddd;" />
+
+        <!-- Misc -->
+        <h2 id="misc">Misc</h2>
+        <p>
+          My role model is Alex Honnold.
+          <a href="https://groups.csail.mit.edu/mac/classes/6.805/articles/privacy/Privacy_brand_warr2.html"
+            >My favorite moment of his</a
+          >
+          &mdash; that is the sheer obsession I want to have.
+        </p>
+        <p>
+          I spent two summers in high school painting and drawing and still do casual
+          sketches. I play basketball and tennis for fun, enjoy walking around, getting
+          coffee and boba.
+        </p>
+        <p>
+          My great grandfather was a Chinese history scholar who survived the
+          <a href="https://en.wikipedia.org/wiki/Laogai">Laogai</a> through decades of
+          hiding. I always remember him as a knowledgeable, positive man surrounded by
+          books from his scholarly days in the 1930s&ndash;40s. His memory lives on in
+          my habit of reading Wikipedia pages about Chinese history and digital records
+          of ancient texts
+          (<a href="https://ctext.org/zhs" target="_blank">through this great effort!</a>).
+          For trivia, I can match most Gregorian years to their corresponding Chinese
+          era names.
+        </p>
+        <p>
+          Originally from Ningbo, I've lived in Shanghai and Beijing (China), Manchester
+          / Auburn NH, Bloomfield Hills MI, New York City, and the SF Bay Area. I also
+          studied briefly in Auckland, New Zealand and Paris, France.
+        </p>
+        <p>
+          I'm fluent in English and Mandarin, took Latin to AP level, and am currently
+          learning French and Russian.
+        </p>
+        <!-- <p><a href="appreciation/some-appreciations.html">Some appreciations.</a></p> -->
+
+      </div><!-- .content -->
+    </div><!-- .page-container -->
+  </body>
 </html>

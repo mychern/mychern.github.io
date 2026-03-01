@@ -1,215 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="google-site-verification"
       content="xvD194KsBxeaW40tr48z5nGiEF-zbgEgpTNHhK2AMu8"
     />
-    <title>Research</title>
+    <title>Research &mdash; Mark Chen</title>
     <link rel="stylesheet" href="../styles.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
   </head>
+  <body>
 
-  <html>
-    <body>
-      <h1>Mark Chen</h1>
+    <header>
+      <a href="../index.html" class="site-name">Mark Chen</a>
+      <nav>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#teaching">Teaching</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#awards">Awards</a>
+        <a href="../index.html#misc">Misc</a>
+      </nav>
+    </header>
 
-      <div style="text-align: center">
-        <a href="../index.html">About Me</a> |
-        <a href="research_and_projects.html">Research</a> |
-        <a href="teaching_and_notes.html">Teaching & Miscellaneous Notes</a> |
-        <a href="work_experience.html">Work Experience</a> |
-        <a href="at_school.html">At School (Courseworks, Awards, etc)</a>
-        <!-- |
-        <a href="../appreciation/some-appreciations.html">Appreciations</a> -->
-        <br />
-      </div>
+    <main>
 
-      <h2 id="research">Research & Projects</h2>
-      <h3><u>Recent Publications (ones in submission are noted)</u></h3>
-      (By default, authors are ordered alphabetically by last name. Otherwise, * indicate co-authors who contributed equally with me; these are listed alphabetically as well.)
-      <p>
-        <b>Big Bird: Privacy Budget Management for W3C's Privacy-Preserving Attribution API</b> [In Submission to OSDI'26, <a href="https://arxiv.org/abs/2506.05290" target=_blank
-        >arXiv</a
-        >].
-        <div style="margin-left: 20px; margin-top: -12px;">
-        <!-- <ul style="margin-top: 5px; padding-left: 20px;"> -->
-          With Pierre Tholoniat, Alison Caulfield*, Giorgio Cavicchioli*, Benjamin Case, Asaf Cidon, Roxana Geambasu, Mathias Lécuyer, and Martin Thomson
-        </div>
-        <div style="margin-left: 20px;">
-        <!-- </ul> -->
-        </div>
-        <div  style="margin-left: 20px">
-          <ul>
-          <li>
-            <i
-              >A follow-up to the SOSP24 paper <a href="https://arxiv.org/abs/2405.16719" target=_blank
-              >Cookie Monster</a
-              >.</i
-            >
-          </li>
-          <li>
-            <i
-              >At the <a href="https://cs3-erc.org/" target=_blank>CS3's</a> NSF site visit day workshop, our work received unanimous top-band rating.</i
-            >
-          </li>
-          <li>
-            <i
-              ><a href="https://www.w3.org/2022/08/PROPOSED-PATWG-charter.html" target="_blank">PATWG</a> preliminarily approved adopting this work to their standardization, considered by major browsers including Firefox, Chrome, etc. </i
-            >
-          </li>
+      <section id="research">
+        <h2>Research &amp; Projects</h2>
+        <p class="note">
+          By default, authors are ordered alphabetically by last name. * indicates
+          co-authors who contributed equally with me (also alphabetically listed).
+        </p>
+
+        <h3>Publications &amp; Preprints</h3>
+
+        <div class="paper">
+          <div class="paper-title">
+            Big Bird: Privacy Budget Management for W3C's Privacy-Preserving Attribution API
+          </div>
+          <div class="paper-authors">
+            With Pierre Tholoniat, Alison Caulfield*, Giorgio Cavicchioli*, Benjamin Case,
+            Asaf Cidon, Roxana Geambasu, Mathias Lécuyer, and Martin Thomson
+          </div>
+          <div class="paper-venue">
+            <span class="venue-name">In Submission to OSDI '26</span> &mdash;
+            [<a href="https://arxiv.org/abs/2506.05290" target="_blank">arXiv</a>]
+          </div>
+          <ul class="paper-notes">
+            <li>
+              A follow-up to the SOSP '24 paper
+              <a href="https://arxiv.org/abs/2405.16719" target="_blank">Cookie Monster</a>.
+            </li>
+            <li>
+              At the <a href="https://cs3-erc.org/" target="_blank">CS3</a> NSF site visit
+              day workshop, our work received unanimous top-band rating.
+            </li>
+            <li>
+              <a href="https://www.w3.org/2022/08/PROPOSED-PATWG-charter.html" target="_blank"
+                >PATWG</a
+              >
+              preliminarily approved adopting this work to their standardization, considered
+              by major browsers including Firefox, Chrome, etc.
+            </li>
           </ul>
         </div>
-        <b>Boolean function monotonicity testing requires (almost) $n^{1/2}$ queries</b> [<u><b>STOC'26 (Accepted with Two "Strong Accept"s!)</b></u>, <a href="https://arxiv.org/abs/2511.04558" target=_blank
-        >arXiv</a
-        >].
-        <div style="margin-left: 20px; margin-top: 5px;">
-        <!-- <ul style="margin-top: 5px; padding-left: 20px;"> -->
-          With Xi Chen, Hao Cui, William Pires, and Jonah Stockwell
+
+        <div class="paper">
+          <div class="paper-title">
+            Boolean function monotonicity testing requires (almost) \(n^{1/2}\) queries
+          </div>
+          <div class="paper-authors">
+            With Xi Chen, Hao Cui, William Pires, and Jonah Stockwell
+          </div>
+          <div class="paper-venue">
+            <span class="venue-name">STOC '26</span> (Accepted with two &ldquo;Strong Accept&rdquo;s) &mdash;
+            [<a href="https://arxiv.org/abs/2511.04558" target="_blank">arXiv</a>]
+          </div>
         </div>
-        <!-- </ul> -->
-        <br/>
-        <!-- TODO: more -->
-        <!-- ...
-        <a href="" target=_blank
-          >[...]</a
-        >.
-        <div style="margin-left: 20px; margin-top: 5px;">
-        With .... <br />
+
+        <h3>Pre-College Projects</h3>
+
+        <div class="paper">
+          <div class="paper-title">
+            Active Learning over DNN: Automated Engineering Design Optimization for
+            Fluid Dynamics Based on Self-Simulated Dataset
+          </div>
+          <div class="paper-authors">Independent work.</div>
+          <div class="paper-venue">
+            <a href="https://www.societyforscience.org/regeneron-sts/2020-scholars/" target="_blank"
+              >Regeneron Science Talent Search 2020 Scholar</a
+            > &mdash;
+            [<a href="https://arxiv.org/pdf/2001.08075.pdf" target="_blank">arXiv</a>]
+          </div>
+          <ul class="paper-notes">
+            <li>State Second Prize in Engineering, Michigan SEFMD, 2019.</li>
+            <li>First in Engineering Mechanics Category, SEFMD, 2019.</li>
+            <li>
+              North America Regional 1st Prize;
+              <a href="https://ymsc.tsinghua.edu.cn/en/info/1024/1166.htm" target="_blank"
+                >Global Honorable Mention (Top 10) in CS</a
+              >, Shing-Tung Yau High School Science Awards, 2018.
+            </li>
+          </ul>
+        </div>
+
+        <div class="paper">
+          <div class="paper-title">
+            A Novel Treatment Optimization System and Top Gene Identification via Machine
+            Learning with Application on Breast Cancer
+          </div>
+          <div class="paper-authors">With Yuhang Wu.</div>
+          <div class="paper-venue">
+            <a href="https://www.scirp.org/pdf/JBiSE_2018052914441283.pdf" target="_blank"
+              >Journal of Biomedical Science and Engineering</a
+            >
+          </div>
+          <ul class="paper-notes">
+            <li>Category Honorable Mention, SEFMD, 2018.</li>
+          </ul>
+        </div>
+
+        <h3>Talks &amp; Posters</h3>
         <ul>
-        <li>
-          <i
-            >...</i
-          >
-        </li>
-        </ul> -->
-      </div>
-      </p>
-      <h3><u>Poster / Talks Contributed To / Given</u></h3>
-      <p>
-      <ul>
-        <li>
-          <b>[About "Big Bird"] Evaluating Optimization Queries:
-            Methodology and Preliminary Results
-          </b> [<a href="https://github.com/w3c/patwg/issues/60" target=_blank
-          >PATWG GitHub issue</a
-          >, <a href="../talks/[PATWG] Evaluating Optimization Queries (LLP).pdf" target=_blank
-          >Slides</a
-          >].
-        </li>
-        <li>
-          <b>[About "Invidual Sparse Vector vis Target Charging"] Adaptive Individual Accounting with Target Charging technique
-          </b> [<a href="../talks/ISV Poster.pdf" target=_blank
-          >Poster</a
-          >].
-        </li>
-        <li>
-          <b>[About "Big Bird" and "CityOS"] Privacy-Preserving Architecture: From W3C Standards to Smart Cities
-          </b> [<a href="../talks/[SV] Poster Cookie Monster+CityOS.pdf" target=_blank
-          >Poster</a
-          >].
-        </li>
-        <li>
-          <b>[About "Average-Case Hardness of TFNP in ROM"] Proof of Sequential Work / Verifiable Delay Functions in ROM
-          </b> [<a href="../talks/literature.pdf" target=_blank
-          >typed</a
-          >, <a href="../talks/literature (written) (1).pdf" target=_blank
-          >written</a
-          >].
-        </li>
-          <!-- TODO: more talks -->
-      </ul>
-      </p>
-      <h3><u>Survey Papers and Unpublished Class Projects</u></h3>
-      <ul>
-        <li>
-          <b>(Spring 2025) Proof Complexity</b>
-          "Equivalences between TFNP^{dt} and Low-Level Proof Systems with an example in $PPA^{dt} \equiv \mathbb{F}_2$-Nullstellensatz":
-          [<a
-            href="../class-projects/Proof-Query-TFNP.pdf"
-            target="_blank"
-            >pdf</a
-          >].
-        </li>
-        <li>
-          <b>(Spring 2024) Unconditional Lower Bounds & Derandomization</b>
-          "Fractional Pseudorandom Generators and Bounded Fourier Tails: A Literature Review":
-          [<a
-            href="../class-projects/Fractional_PRGs_Literature_review_Final_.pdf"
-            target="_blank"
-            >pdf</a
-          >].
-        </li>
-        <li>
-          <b>(Spring 2024) Unconditional Lower Bounds & Derandomization</b>
-          "Bounding Threshold Formulas using Multiparty Communication Complexity Techniques":
-          [<a
-            href="../class-projects/Bounding THR.pdf"
-            target="_blank"
-            >pdf</a
-          >].
-        </li>
-        <li>
-          <b>(Spring 2024) Advanced Cryptography</b>
-          "Path to a New Secure Reinforcement Learning Model - Explicit Construction as an IP and Cryptographic Implications":
-          [<a
-            href="../class-projects/TFNP comes to RL.pdf"
-            target="_blank"
-            >pdf</a
-          >].
-        </li>
-      </ul>
-      <h3><u>High School Publications</u></h3>
-      <p>
-        <b>Active Learning over DNN: Automated Engineering Design Optimization for
-        Fluid Dynamics Based on Self-Simulated Dataset</b> [<a href="https://www.societyforscience.org/regeneron-sts/2020-scholars/" target=_blank
-        >Regeneron Science Talent Search 2020 Selected</a
-        >, <a href="https://arxiv.org/pdf/2001.08075.pdf" target=_blank
-        >arXiv</a
-        >].
-        <div style="margin-left: 20px; margin-top: -12px;">
-        <ul style="margin-top: 5px; padding-left: 20px;">
-          Independent work.
           <li>
-            <i
-              >State Second Prize in Engineering, Michigan Science and Engineering
-              Fair (SEFMD), 2019.</i
-            >
+            <strong>[Big Bird] Evaluating Optimization Queries: Methodology and Preliminary Results</strong>
+            [<a href="https://github.com/w3c/patwg/issues/60" target="_blank">PATWG GitHub issue</a>,
+            <a href="../talks/[PATWG] Evaluating Optimization Queries (LLP).pdf" target="_blank">Slides</a>]
           </li>
           <li>
-            <i
-              >First in Engineering Mechanics Category, Science and Engineering
-              Fair of Metro Detroit (SEFMD), 2019.</i
-            >
+            <strong>[Individual Sparse Vector via Target Charging] Adaptive Individual Accounting with Target Charging</strong>
+            [<a href="../talks/ISV Poster.pdf" target="_blank">Poster</a>]
           </li>
           <li>
-            <i
-              >North America Regional 1st Prize,
-              <a href="https://ymsc.tsinghua.edu.cn/en/info/1024/1166.htm" target=_blank
-                >Global Honorable Mention (Top 10) in Computer Science Category</a
-              >, Shing-Tung Yau High School Science Awards, 2018.</i
-            >
+            <strong>[Big Bird &amp; CityOS] Privacy-Preserving Architecture: From W3C Standards to Smart Cities</strong>
+            [<a href="../talks/[SV] Poster Cookie Monster+CityOS.pdf" target="_blank">Poster</a>]
+          </li>
+          <li>
+            <strong>[Average-Case Hardness of TFNP in ROM] Proof of Sequential Work / Verifiable Delay Functions in ROM</strong>
+            [<a href="../talks/literature.pdf" target="_blank">typed</a>,
+            <a href="../talks/literature (written) (1).pdf" target="_blank">written</a>]
           </li>
         </ul>
-        </div>
-        <br />
-        <b>A Novel Treatment Optimization System and Top Gene Identification via
-        Machine Learning with Application on Breast Cancer</b>
-        <a href="https://www.scirp.org/pdf/JBiSE_2018052914441283.pdf" target=_blank
-          >[Journal of Biomedical Science and Engineering]</a
-        >.
-        <div style="margin-left: 20px; margin-top: 5px;">
-        With Yuhang Wu. <br />
-        <ul style="margin-top: 5px; padding-left: 20px;">
-        <li>
-          <i
-            >Category Honorable Menstion, Science and Engineering Fair of Metro
-            Detroit (SEFMD), 2018.</i
-          >
-        </li>
+
+        <h3>Survey Papers &amp; Class Projects</h3>
+        <ul>
+          <li>
+            <strong>(Spring 2025) Proof Complexity</strong> &mdash;
+            &ldquo;Equivalences between TFNP<sup>dt</sup> and Low-Level Proof Systems with
+            an example in \(\mathbb{F}_2\)-Nullstellensatz&rdquo;
+            [<a href="../class-projects/Proof-Query-TFNP.pdf" target="_blank">pdf</a>]
+          </li>
+          <li>
+            <strong>(Spring 2024) Unconditional Lower Bounds &amp; Derandomization</strong> &mdash;
+            &ldquo;Fractional Pseudorandom Generators and Bounded Fourier Tails: A Literature Review&rdquo;
+            [<a href="../class-projects/Fractional_PRGs_Literature_review_Final_.pdf" target="_blank">pdf</a>]
+          </li>
+          <li>
+            <strong>(Spring 2024) Unconditional Lower Bounds &amp; Derandomization</strong> &mdash;
+            &ldquo;Bounding Threshold Formulas using Multiparty Communication Complexity Techniques&rdquo;
+            [<a href="../class-projects/Bounding THR.pdf" target="_blank">pdf</a>]
+          </li>
+          <li>
+            <strong>(Spring 2024) Advanced Cryptography</strong> &mdash;
+            &ldquo;Path to a New Secure Reinforcement Learning Model &mdash; Explicit Construction
+            as an IP and Cryptographic Implications&rdquo;
+            [<a href="../class-projects/TFNP comes to RL.pdf" target="_blank">pdf</a>]
+          </li>
         </ul>
-      </div>
-      </p>
-    </body>
-  </html>
+      </section>
+
+    </main>
+  </body>
 </html>

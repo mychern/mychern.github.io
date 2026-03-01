@@ -1,44 +1,245 @@
+/* Google Fonts — same families as reference site */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto+Mono&display=swap');
+
+/* ── Base ───────────────────────────────────────────── */
+html { overflow-y: scroll; }
+
 body {
-  margin: 5% 20%;
-  font-family: Arial, sans-serif;
-  text-align: left;
+  font-family: Lora, Georgia, 'Times New Roman', Times, serif;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  color: #494e52;
 }
 
-hr {
-  margin: 2% 0%;
+a { text-decoration: none; color: #077cd2; }
+a:hover { text-decoration: underline; }
+
+h2, h3 {
+  font-family: Lato, Arial, sans-serif;
+  font-weight: 400;
+  color: #222;
 }
 
-li {
-  margin-bottom: 1%;
-  margin-top: 1%;
+h4 {
+  font-family: Lato, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #494e52;
+  margin: 0.8em 0 0.2em;
 }
 
-h1,
-h2 {
-  text-align: center;
+h1.title { border-bottom: 0.25pt dashed gray; }
+
+pre { margin: 1ex; padding: 1ex; }
+
+/* ── Page layout ────────────────────────────────────── */
+.page-container {
+  margin: 50px auto;
+  display: flex;
+  width: 900px;
 }
 
-#picture-div {
-  width: 350px;
-  float: right;
-  margin-left: 10%;
-  margin-right: -13%;
+/* ── Sidebar ────────────────────────────────────────── */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 40px;
+  width: 160px;
+  flex-shrink: 0;
 }
 
-img {
-  height: 250px;
-  border-radius: 25px;
+.monospace {
+  font-family: 'Roboto Mono', 'Dejavu Sans Mono', monospace;
 }
 
-a {
-  color: darkblue;
+.name {
+  font-size: 1.2em;
+  border-bottom: 1pt solid #000;
+  margin-bottom: 8px;
 }
 
-.h1-colorful {
-  color: slateblue;
+.sidebar .nav-items {
+  padding: 5px 5px 0 0;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.table-container {
+.sidebar .nav-items .nav-item {
+  margin: 2px 0;
+  padding-right: 5px;
+  transition: border-color 0.5s;
+  border-right: 4px solid #fff;
+}
+
+.sidebar .nav-items .nav-item:hover {
+  border-right-color: #00ba0f;
+}
+
+.sidebar .nav-items .nav-item a {
+  color: #494e52;
+  text-decoration: none;
+}
+
+.sidebar .nav-items .nav-item a:hover {
+  text-decoration: none;
+}
+
+.sidebar .nav-items .active-nav-item {
+  border-right-color: #00ba0f;
+}
+
+/* ── Content area ───────────────────────────────────── */
+.content { flex: 1; min-width: 0; }
+
+.content img {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ── Paper entries ──────────────────────────────────── */
+div.paper {
+  display: flex;
+  flex-direction: column;
+  margin: 0.8em 0;
+}
+
+h3 + div.paper {
+  margin-top: 0.4em;
+}
+
+div.paper div.title {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+div.paper div.title a {
+  color: inherit;
+}
+
+div.paper div.authors-and-venue {
+  margin-left: 8px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.paper div.authors-and-venue div.authors {
+  margin-right: 1em;
+}
+
+div.paper div.authors-and-venue div.venue {
+  min-width: fit-content;
+  font-style: italic;
+}
+
+div.paper div.venue-badge {
+  font-family: Lato, Arial, sans-serif;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #048a0f;
+}
+
+div.paper div.detail {
+  margin-left: 8px;
+  text-align: left;
+  font-style: italic;
+}
+
+div.paper div.detail a {
+  font-size: 0.8em;
+  font-style: normal;
+}
+
+div.paper ul.notes {
+  margin-left: 8px;
+  margin-bottom: 0;
+  font-style: italic;
+  font-size: 0.9em;
+  padding-left: 20px;
+  color: #868f97;
+}
+
+div.paper ul.notes li { margin-bottom: 3px; }
+div.paper ul.notes a { font-style: normal; }
+
+/* ── Teaching ───────────────────────────────────────── */
+div.teaching {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+div.teaching div.left {
+  width: 120px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  padding-top: 3px;
+  text-align: right;
+  font-weight: 700;
+}
+
+div.teaching div.left div.role { text-align: right; font-weight: 700; }
+div.teaching div.left div.role span.emphasize { color: #048a0f; }
+div.teaching div.left div.year { text-align: right; font-weight: 400; }
+
+div.teaching div.right div.class {
+  color: #222;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 1.1em;
+}
+
+div.teaching div.right div.detail { color: #868f97; }
+div.teaching div.right div.detail p:first-of-type { margin-top: 0; }
+
+/* ── Internship / Work ──────────────────────────────── */
+div.internship {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+div.internship div.left {
+  width: 150px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  text-align: right;
+  font-weight: 700;
+}
+
+div.internship div.left div.year { font-weight: 400; }
+div.internship div.right a { font-size: 0.8em; }
+
+/* ── Email ──────────────────────────────────────────── */
+span.email {
+  font-family: 'Roboto Mono', 'Dejavu Sans Mono', monospace;
+  font-size: 0.9em;
+}
+
+span.email a { color: #494e52; text-decoration: none; }
+
+/* ── Lists ──────────────────────────────────────────── */
+ul { padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 960px) {
+  .page-container { width: 100%; padding: 0 20px; }
+}
+
+@media (max-width: 680px) {
+  .page-container { flex-direction: column; }
+  .sidebar { width: 100%; align-items: flex-start; margin-right: 0; margin-bottom: 24px; }
+  .sidebar .nav-items { flex-direction: row; flex-wrap: wrap; width: 100%; }
+  .sidebar .nav-items .nav-item {
+    border-right: none;
+    border-bottom: 4px solid #fff;
+    padding: 0 8px 2px;
+  }
+  .sidebar .nav-items .nav-item:hover { border-bottom-color: #00ba0f; }
+  .sidebar .nav-items .active-nav-item { border-bottom-color: #00ba0f; }
 }
