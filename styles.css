@@ -244,6 +244,24 @@ span.email {
 
 span.email a { color: #494e52; text-decoration: none; }
 
+/* ── Heading anchor links ──────────────────────────── */
+h2[id] .anchor-link,
+h3[id] .anchor-link {
+  opacity: 0;
+  margin-left: 0.3em;
+  font-size: 0.7em;
+  color: #aaa;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: opacity 0.2s;
+}
+
+h2[id]:hover .anchor-link,
+h3[id]:hover .anchor-link { opacity: 1; }
+
+h2[id] .anchor-link:hover,
+h3[id] .anchor-link:hover { color: #8C1515; text-decoration: none; }
+
 /* ── Lists ──────────────────────────────────────────── */
 ul { padding-left: 22px; }
 li { margin-bottom: 6px; }
