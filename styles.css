@@ -236,6 +236,28 @@ div.internship div.right div.entry:last-child { margin-bottom: 0; }
 
 div.internship div.right a { font-size: 0.8em; }
 
+/* ── Quotes ─────────────────────────────────────────── */
+blockquote.quote {
+  margin: 1em 0 1.2em;
+  padding: 2px 0 2px 16px;
+  border-left: 3px solid #00ba0f;
+  font-style: italic;
+  color: #494e52;
+}
+
+blockquote.quote .attribution {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-size: 0.85em;
+  color: #868f97;
+}
+
+blockquote.quote .attribution cite { font-style: italic; }
+
+blockquote.quote .attribution a { color: #868f97; text-decoration: underline; }
+blockquote.quote .attribution a:hover { color: #8C1515; }
+
 /* ── Email ──────────────────────────────────────────── */
 span.email {
   font-family: 'Roboto Mono', 'Dejavu Sans Mono', monospace;
