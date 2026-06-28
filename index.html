@@ -15,7 +15,7 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
   </head>
-  <body>
+  <body class="has-custom-cursor">
     <div class="cursor-dot"></div>
     <div class="cursor-ring"></div>
     <div class="page-container">
@@ -60,7 +60,7 @@
 
         <p>
           Fundamentally, I'm driven by privacy — the pursuit of
-          "<a href="https://groups.csail.mit.edu/mac/classes/6.805/articles/privacy/Privacy_brand_warr2.html"
+          "<a href="https://groups.csail.mit.edu/mac/classes/6.805/articles/privacy/Privacy_brand_warr2.html" target="_blank"
             >the right to be let alone</a
           >". My interests in cryptography, privacy, and the theoretical foundations of
           related fields are instantiations of this fundamental drive.
@@ -412,7 +412,7 @@
         <h3 id="phd">PhD</h3>
         <ul>
           <li><strong>STOC'26 Best Paper Award</strong></li>
-          <li><strong>IC3 Hackathon 2nd Place Winner (2026)</strong> Came with a 0.5 ETH prize, for the &ldquo;Trustless Agent&rdquo; project based on <a href="https://arxiv.org/abs/2606.03771" target="_blank">this paper</a> on agent property auditing; also won 3rd place for &ldquo;Funniest Presentation. For more detail, see <a href="https://ic3research.org/ic3-blockchain-camp-2026/" target="_blank">official post</a> under "Hackathon Winners"</li>
+          <li><strong>IC3 Hackathon 2nd Place Winner (2026)</strong> Came with a 0.5 ETH prize, for the &ldquo;Trustless Agent&rdquo; project based on <a href="https://arxiv.org/abs/2606.03771" target="_blank">this paper</a> on agent property auditing; also won 3rd place for &ldquo;Funniest Presentation.&rdquo; For more detail, see the <a href="https://ic3research.org/ic3-blockchain-camp-2026/" target="_blank">official post</a> under &ldquo;Hackathon Winners.&rdquo;</li>
           <li><strong>Stanford School of Engineering Fellowship</strong> (covering first-year PhD costs, such as rotations, by the school)</li>
           <li><strong>Cornell Fellowship</strong> (exempted from required TAships during PhD)</li>
           <li><strong>UW Allen School Computer Science &amp; Engineering Research Fellowship (CSERF)</strong> (for top first-year PhD admits, +$3,000/year stipend)</li>
@@ -574,48 +574,6 @@
       updateActive();
 
       // Add anchor links to all h2/h3 with ids
-      // Custom cursor
-      (function() {
-        const mq = window.matchMedia('(hover:hover) and (pointer:fine) and (min-width:1024px)');
-        if (!mq.matches) return;
-
-        const dot = document.querySelector('.cursor-dot');
-        const ring = document.querySelector('.cursor-ring');
-        let mouse = { x: -100, y: -100 };
-        let raf;
-
-        function render() {
-          dot.style.transform = `translate(${mouse.x - 3}px, ${mouse.y - 3}px)`;
-          ring.style.transform = `translate(${mouse.x}px, ${mouse.y}px)`;
-        }
-
-        document.addEventListener('mousemove', function(e) {
-          mouse.x = e.clientX;
-          mouse.y = e.clientY;
-          dot.style.opacity = '1';
-          ring.style.opacity = '0.3';
-          if (raf) cancelAnimationFrame(raf);
-          raf = requestAnimationFrame(render);
-        });
-
-        document.addEventListener('mouseleave', function() {
-          dot.style.opacity = '0';
-          ring.style.opacity = '0';
-        });
-
-        document.addEventListener('mouseover', function(e) {
-          if (e.target.closest('a, button, input, textarea, select, [role="button"]')) {
-            ring.classList.add('hover');
-          }
-        });
-
-        document.addEventListener('mouseout', function(e) {
-          if (e.target.closest('a, button, input, textarea, select, [role="button"]')) {
-            ring.classList.remove('hover');
-          }
-        });
-      })();
-
       document.querySelectorAll('h2[id], h3[id]').forEach(heading => {
         const link = document.createElement('a');
         link.href = '#' + heading.id;
@@ -631,5 +589,6 @@
         heading.appendChild(link);
       });
     </script>
+    <script src="cursor.js"></script>
   </body>
 </html>
