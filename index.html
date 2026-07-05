@@ -84,11 +84,89 @@
           <li><em>&dagger; Non-PhD-students who had contributed considerably listed alphabetically (i.e. everyone listed passes a certain contribution threshold), as per the convention of Columbia's Applied DP Infrastructure Lab led by Prof. Roxana Geambasu. As such, it doesn't imply equal contribution.</em></li>
         </ul>
 
-        <h3 id="publications">Publications &amp; Preprints</h3>
+        <h3 id="publications">Publications</h3>
+
+        <div class="pub-list">
 
         <div class="paper">
-          <div class="title" style="color: #8C1515;">
-            Adaptive Target-Charging with Privacy Filters and Individual Accounting (public release coming soon)
+          <div class="title">
+            <a href="https://arxiv.org/abs/2506.05290" target="_blank">Big Bird: Resilient Privacy Budgeting Across Untrusted Web Domains</a>
+          </div>
+          <div class="authors-and-venue">
+            <div class="authors">
+              With Pierre Tholoniat, Alison Caulfield&dagger;, Giorgio Cavicchioli&dagger;, Benjamin Case,
+              Asaf Cidon, Roxana Geambasu, Mathias Lécuyer, and Martin Thomson
+            </div>
+            <div class="venue">
+              <div class="venue-badge">SOSP '26</div>
+            </div>
+          </div>
+          <ul class="notes">
+            <li>
+              <p>Big Bird extends on-device privacy budgeting for private ad measurement so that its differential privacy guarantee holds even when untrusted web domains mount Sybil attacks to deplete users' privacy budgets.</p>
+              <p>I contributed to formulating and proving the theory for Big Bird's global privacy budget management, including the data modeling, the sensitivity bounds, and the resilience-to-DoS-depletion theorem against Sybil attacks. Building on this analysis, I formalized the per-user-action quota counts that separate benign behaviors from Sybil ones and incorporated them into Big Bird's privacy and graceful-degradation analyses.</p>
+              <p>On the systems side, I implemented a third of the general DP budget API in Rust, by the time of first public release, that several parallel projects such as CityOS build on. I was also one of the two main contributors evaluating learning with labeled proportions across DP architectures, which helped convince the W3C Private Advertising Technology Working Group (PATWG) of our design.</p>
+            </li>
+            <li>
+              Fun Facts
+              <ul>
+                <li>Accepted to SOSP'26 with unanimous accepts, bypassing the PC discussion.</li>
+                <li>
+                  A follow-up to the SOSP '24 paper
+                  <a href="https://arxiv.org/abs/2405.16719" target="_blank">Cookie Monster</a>, which won the Honorable Mention for Distinguished Artifact.
+                </li>
+                <li>
+                  At the <a href="https://cs3-erc.org/" target="_blank">CS3</a> NSF site visit
+                  day workshop, our work received unanimous top-band rating.
+                </li>
+                <li>
+                  <a href="https://www.w3.org/2022/08/PROPOSED-PATWG-charter.html" target="_blank"
+                    >PATWG</a
+                  >
+                  preliminarily approved adopting this work to their standardization, considered
+                  by major browsers including Firefox and Chrome.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="paper">
+          <div class="title">
+            <a href="https://arxiv.org/abs/2511.04558" target="_blank">Boolean Function Monotonicity Testing Requires (Almost) \(n^{1/2}\) Queries</a>
+          </div>
+          <div class="authors-and-venue">
+            <div class="authors">
+              With Xi Chen, Hao Cui, William Pires, and Jonah Stockwell
+            </div>
+            <div class="venue">
+              <div class="venue-badge" style="text-align: right;"><span style="display: inline; color: #DD5E33;"><a href="https://www.sigact.org/prizes/best_paper.html" target="_blank" style="color: inherit; text-decoration: underline;">Best Paper Award</a> at </span>STOC '26</div>
+            </div>
+          </div>
+          <ul class="notes">
+            <li>
+              <p>We prove a nearly tight \(\Omega(n^{1/2-c})\) lower bound for adaptive monotonicity testing of Boolean functions, which moved the lower bound that's been stuck for 10 years, solving an open problem standing for 30 years. We did so based on successfully breaking the barrier of the last construction into a constant number of levels (previous attempts fail to change the lower bound due to trivial attacks).</p>
+              <p>I contributed by proving most of the intermediate claims in the good case, as well as the good-outcome induction that bounds layer-by-layer information leakage in the new construction. I also took the initiative to prove a first version of the adaptivity hierarchy lower bound, where the construction gives tight bounds for any constant round of adaptivity.</p>
+              <p>The same construction and similar proofs also settle, up to a sub-polynomial gap, the complexity of testing both monotonicity and unateness in the relative-error model.</p>
+            </li>
+            <li>
+              Fun Facts
+              <ul>
+                <li>Mentioned in <a href="https://www.wisdom.weizmann.ac.il/~oded/MC/421.html" target="_blank">Professor Oded Goldreich's selection</a> of property testing papers.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        </div><!-- /.pub-list (Publications) -->
+
+        <h3 id="manuscripts">Manuscripts</h3>
+
+        <div class="pub-list">
+
+        <div class="paper">
+          <div class="title">
+            <a href="#" class="popup-trigger" data-popup="public release coming soon!">Adaptive Target-Charging with Privacy Filters and Individual Accounting</a>
           </div>
           <div class="authors-and-venue">
             <div class="authors">
@@ -116,55 +194,7 @@
           </div>
         </div>
 
-        <div class="paper">
-          <div class="title">
-            <a href="https://arxiv.org/abs/2506.05290" target="_blank">Big Bird: Resilient Privacy Budgeting Across Untrusted Web Domains</a>
-          </div>
-          <div class="authors-and-venue">
-            <div class="authors">
-              With Pierre Tholoniat, Alison Caulfield&dagger;, Giorgio Cavicchioli&dagger;, Benjamin Case,
-              Asaf Cidon, Roxana Geambasu, Mathias Lécuyer, and Martin Thomson
-            </div>
-            <div class="venue">
-              <div class="venue-badge">SOSP '26</div>
-            </div>
-          </div>
-          <ul class="notes">
-            <li>Accepted to SOSP'26 with unanimous accepts, bypassing the PC discussion.</li>
-            <li>
-              A follow-up to the SOSP '24 paper
-              <a href="https://arxiv.org/abs/2405.16719" target="_blank">Cookie Monster</a>.
-            </li>
-            <li>
-              At the <a href="https://cs3-erc.org/" target="_blank">CS3</a> NSF site visit
-              day workshop, our work received unanimous top-band rating.
-            </li>
-            <li>
-              <a href="https://www.w3.org/2022/08/PROPOSED-PATWG-charter.html" target="_blank"
-                >PATWG</a
-              >
-              preliminarily approved adopting this work to their standardization, considered
-              by major browsers including Firefox and Chrome.
-            </li>
-          </ul>
-        </div>
-
-        <div class="paper">
-          <div class="title">
-            <a href="https://arxiv.org/abs/2511.04558" target="_blank">Boolean Function Monotonicity Testing Requires (Almost) \(n^{1/2}\) Queries</a>
-          </div>
-          <div class="authors-and-venue">
-            <div class="authors">
-              With Xi Chen, Hao Cui, William Pires, and Jonah Stockwell
-            </div>
-            <div class="venue">
-              <div class="venue-badge" style="text-align: right;">STOC '26 <span style="display: block; color: #DD5E33;">(<a href="https://www.sigact.org/prizes/best_paper.html" target="_blank" style="color: inherit; text-decoration: underline;">Best Paper Award</a>)</span></div>
-            </div>
-          </div>
-          <ul class="notes">
-            <li>Mentioned in <a href="https://www.wisdom.weizmann.ac.il/~oded/MC/421.html" target="_blank">Professor Oded Goldreich's selection</a> of property testing papers.</li>
-          </ul>
-        </div>
+        </div><!-- /.pub-list (Manuscripts) -->
 
         <h3 id="talks">Talks &amp; Posters</h3>
         <ul>
@@ -243,7 +273,7 @@
           </div>
           <div class="right">
             <div class="class">Intro to Cryptography (COMS 3262)</div>
-            <div class="detail">Columbia University &mdash; expected enrollment: 30+ students</div>
+            <div class="detail">Columbia University &mdash; final enrollment: 29 students</div>
           </div>
         </div>
 
@@ -547,6 +577,15 @@
 
       </div><!-- .content -->
     </div><!-- .page-container -->
+
+    <!-- Modular popup modal: any element with data-popup="..." opens it (init in script below) -->
+    <div class="modal-overlay" id="popup-modal" hidden>
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="popup-modal-text">
+        <button class="modal-close" type="button" aria-label="Close">&times;</button>
+        <p class="modal-text" id="popup-modal-text"></p>
+      </div>
+    </div>
+
     <script>
       const sections = ['about','research','teaching','work','awards','misc'];
       const navItems = {};
@@ -589,6 +628,47 @@
         });
         heading.appendChild(link);
       });
+
+      // ── Number each .pub-list in reverse (bottom = 1) with a clickable badge.
+      //    The badge links wherever the title links, or reuses its [data-popup]. Nothing is hardcoded.
+      document.querySelectorAll('.pub-list').forEach(list => {
+        const papers = list.querySelectorAll(':scope > .paper');
+        const total = papers.length;
+        papers.forEach((paper, i) => {
+          const titleLink = paper.querySelector('.title a');
+          const badge = document.createElement('a');
+          badge.className = 'paper-num';
+          badge.textContent = total - i;            // reverse order: top = total, bottom = 1
+          if (titleLink && titleLink.dataset.popup) {
+            badge.href = '#';
+            badge.dataset.popup = titleLink.dataset.popup;
+            badge.setAttribute('aria-label', titleLink.dataset.popup);
+          } else if (titleLink && titleLink.getAttribute('href')) {
+            badge.href = titleLink.getAttribute('href');
+            if (titleLink.target) badge.target = titleLink.target;
+            badge.rel = 'noopener';
+            badge.setAttribute('aria-label', 'Open paper' + (titleLink.target === '_blank' ? ' (new tab)' : ''));
+          }
+          paper.insertBefore(badge, paper.firstChild);
+        });
+      });
+
+      // ── Modular popup modal: [data-popup] opens it; backdrop / × / Esc closes ──
+      (function () {
+        const modal = document.getElementById('popup-modal');
+        if (!modal) return;
+        const textEl = modal.querySelector('.modal-text');
+        const closeBtn = modal.querySelector('.modal-close');
+        const openModal = msg => { textEl.textContent = msg; modal.hidden = false; };
+        const closeModal = () => { modal.hidden = true; };
+        document.addEventListener('click', e => {
+          const trigger = e.target.closest('[data-popup]');
+          if (trigger) { e.preventDefault(); openModal(trigger.getAttribute('data-popup')); }
+        });
+        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+        closeBtn.addEventListener('click', closeModal);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+      })();
     </script>
     <script src="cursor.js"></script>
   </body>

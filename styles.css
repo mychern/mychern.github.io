@@ -37,8 +37,14 @@ pre { margin: 1ex; padding: 1ex; }
 /* ── Page layout ────────────────────────────────────── */
 .page-container {
   margin: 50px auto;
-  display: flex;
-  width: 900px;
+  display: grid;
+  /* Keep the equal-margin layout's LEFT margin exactly, but make the RIGHT margin 2/3 of it.
+     The margin columns are 3fr and 2fr, so the right is 2/3 of the left. The content column
+     grows with the container via calc so the left margin lands on the old symmetric value,
+     (containerWidth - 731) / 2, at every width, and the content absorbs the space freed on the
+     right. 3655px is 5 x 731px (the content's base width), so if that base changes, change this
+     too. The 185px min keeps the tabs fitting. */
+  grid-template-columns: minmax(185px, 3fr) minmax(0, calc((100% + 3655px) / 6)) 2fr;
 }
 
 /* ── Sidebar ────────────────────────────────────────── */
@@ -46,8 +52,10 @@ pre { margin: 1ex; padding: 1ex; }
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  grid-column: 1;
+  justify-self: end;
   margin-right: 40px;
-  width: 160px;
+  width: fit-content;
   flex-shrink: 0;
   position: sticky;
   top: 20px;
@@ -70,7 +78,7 @@ pre { margin: 1ex; padding: 1ex; }
 
 .sidebar .nav-items {
   padding: 5px 5px 0 0;
-  width: 160px;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -101,7 +109,7 @@ pre { margin: 1ex; padding: 1ex; }
 }
 
 /* ── Content area ───────────────────────────────────── */
-.content { flex: 1; min-width: 0; }
+.content { grid-column: 2; min-width: 0; }
 
 .content img {
   margin-left: auto;
@@ -175,6 +183,96 @@ div.paper ul.notes {
 
 div.paper ul.notes li { margin-bottom: 3px; }
 div.paper ul.notes a { font-style: normal; }
+
+div.paper ul.notes li p { margin: 0 0 0.7em 0; }
+div.paper ul.notes li p:last-child { margin-bottom: 0; }
+
+div.paper ul.notes ul {
+  padding-left: 18px;
+  margin-top: 3px;
+}
+
+/* ── Reverse-numbered paper badges ──────────────────── */
+.pub-list .paper {
+  position: relative;
+  padding-left: 45px;
+}
+
+.pub-list .paper:first-child { margin-top: 0.4em; }
+
+/* Number badge is a real link (.paper-num); its number and target are assigned in JS. */
+.paper-num {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background: #efe8e0;
+  color: #868f97;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto Mono', 'Dejavu Sans Mono', monospace;
+  font-weight: 700;
+  font-size: 0.8em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+
+/* Highlight the badge when hovering anywhere on the paper or the badge itself. */
+.pub-list .paper:hover .paper-num { background: #8C1515; color: #faf8f5; }
+
+/* ── Modal popup (modular; opened by any [data-popup] element) ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 26, 20, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal-overlay[hidden] { display: none; }
+
+.modal-box {
+  position: relative;
+  background: #faf8f5;
+  border: 2px solid #c9bda6;
+  border-radius: 8px;
+  padding: 30px 34px;
+  max-width: 360px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+  color: #a89f8c;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover { color: #8C1515; }
+
+.modal-text {
+  margin: 4px 0 0 0;
+  font-family: Lora, Georgia, serif;
+  font-size: 1.1em;
+  color: #494e52;
+}
 
 /* ── Teaching ───────────────────────────────────────── */
 div.teaching {
@@ -327,13 +425,15 @@ li { margin-bottom: 6px; }
 }
 
 /* ── Responsive ─────────────────────────────────────── */
-@media (max-width: 960px) {
-  .page-container { width: 100%; padding: 0 20px; }
+@media (max-width: 1100px) {
+  /* Below this width there is not enough room for the widened content plus both margins, so
+     switch to tabs on the left with the content filling the rest of the width. */
+  .page-container { grid-template-columns: auto minmax(0, 1fr); padding: 0 20px; }
 }
 
 @media (max-width: 680px) {
-  .page-container { flex-direction: column; }
-  .sidebar { width: 100%; align-items: flex-start; margin-right: 0; margin-bottom: 24px; top: 0; padding-top: 10px; }
+  .page-container { display: block; }
+  .sidebar { width: 100%; align-items: flex-start; justify-self: stretch; margin-right: 0; margin-bottom: 24px; top: 0; padding-top: 10px; }
   .sidebar .nav-items { flex-direction: row; flex-wrap: wrap; width: 100%; }
   .sidebar .nav-items .nav-item {
     border-right: none;
