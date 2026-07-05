@@ -433,7 +433,17 @@ li { margin-bottom: 6px; }
 
 @media (max-width: 680px) {
   .page-container { display: block; }
-  .sidebar { width: 100%; align-items: flex-start; justify-self: stretch; margin-right: 0; margin-bottom: 24px; top: 0; padding-top: 10px; }
+  .sidebar {
+    width: 100%;
+    align-items: flex-start;
+    justify-self: stretch;
+    margin-right: 0;
+    margin-bottom: 24px;
+    top: 0;
+    padding: 10px 0 6px;
+    background-color: #faf8f5;
+    z-index: 10;
+  }
   .sidebar .nav-items { flex-direction: row; flex-wrap: wrap; width: 100%; }
   .sidebar .nav-items .nav-item {
     border-right: none;
@@ -442,4 +452,13 @@ li { margin-bottom: 6px; }
   }
   .sidebar .nav-items .nav-item:hover { border-bottom-color: #00ba0f; }
   .sidebar .nav-items .active-nav-item { border-bottom-color: #00ba0f; }
+
+  /* Stack the author list and the venue badge on their own lines so long badges
+     (e.g. "SOSP '26 (Best Paper Award)") don't crush the authors column. */
+  div.paper div.authors-and-venue {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  div.paper div.authors-and-venue div.authors { margin-right: 0; }
+  div.paper div.authors-and-venue div.venue { margin-top: 4px; }
 }
