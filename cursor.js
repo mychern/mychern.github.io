@@ -29,13 +29,13 @@
   });
 
   document.addEventListener('mouseover', function (e) {
-    if (e.target.closest('a, button, input, textarea, select, [role="button"]')) {
+    if (e.target.closest('a, button, input, textarea, select, summary, [role="button"]')) {
       ring.classList.add('hover');
     }
   });
 
   document.addEventListener('mouseout', function (e) {
-    if (e.target.closest('a, button, input, textarea, select, [role="button"]')) {
+    if (e.target.closest('a, button, input, textarea, select, summary, [role="button"]')) {
       ring.classList.remove('hover');
     }
   });

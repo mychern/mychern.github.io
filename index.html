@@ -106,30 +106,35 @@
           </div>
           <ul class="notes">
             <li>
-              <p>Big Bird extends on-device privacy budgeting for private ad measurement so that its differential privacy guarantee holds even when untrusted web domains mount Sybil attacks to deplete users' privacy budgets.</p>
-              <p>I contributed to formulating and proving the theory for Big Bird's global privacy budget management, including the data modeling, the sensitivity bounds, and the resilience-to-DoS-depletion theorem against Sybil attacks. Building on this analysis, I formalized the per-user-action quota counts that separate benign behaviors from Sybil ones and incorporated them into Big Bird's privacy and graceful-degradation analyses.</p>
-              <p>On the systems side, I implemented a third of the general DP budget API in Rust, by the time of first public release, that several parallel projects such as CityOS build on. I was also one of the two main contributors evaluating learning with labeled proportions across DP architectures, which helped convince the W3C Private Advertising Technology Working Group (PATWG) of our design.</p>
+              <details class="note-fold">
+                <summary>Details &amp; Contributions</summary>
+                <p>Big Bird extends on-device privacy budgeting for private ad measurement so that its differential privacy guarantee holds even when untrusted web domains mount Sybil attacks to deplete users' privacy budgets.</p>
+                <p>I contributed to formulating and proving the theory for Big Bird's global privacy budget management, including the data modeling, the sensitivity bounds, and the resilience-to-DoS-depletion theorem against Sybil attacks. Building on this analysis, I formalized the per-user-action quota counts that separate benign behaviors from Sybil ones and incorporated them into Big Bird's privacy and graceful-degradation analyses.</p>
+                <p>On the systems side, I implemented a third of the general DP budget API in Rust, by the time of first public release, that several parallel projects such as CityOS build on. I was also one of the two main contributors evaluating learning with labeled proportions across DP architectures, which helped convince the W3C Private Advertising Technology Working Group (PATWG) of our design.</p>
+              </details>
             </li>
             <li>
-              Fun Facts
-              <ul>
-                <li>Accepted to SOSP'26 with unanimous accepts, bypassing the PC discussion.</li>
-                <li>
-                  A follow-up to the SOSP '24 paper
-                  <a href="https://arxiv.org/abs/2405.16719" target="_blank">Cookie Monster</a>, which won the Honorable Mention for Distinguished Artifact.
-                </li>
-                <li>
-                  At the <a href="https://cs3-erc.org/" target="_blank">CS3</a> NSF site visit
-                  day workshop, our work received unanimous top-band rating.
-                </li>
-                <li>
-                  <a href="https://www.w3.org/2022/08/PROPOSED-PATWG-charter.html" target="_blank"
-                    >PATWG</a
-                  >
-                  preliminarily approved adopting this work to their standardization, considered
-                  by major browsers including Firefox and Chrome.
-                </li>
-              </ul>
+              <details class="note-fold">
+                <summary>Fun Facts</summary>
+                <ul>
+                  <li>Accepted to SOSP'26 with unanimous accepts, bypassing the PC discussion.</li>
+                  <li>
+                    A follow-up to the SOSP '24 paper
+                    <a href="https://arxiv.org/abs/2405.16719" target="_blank">Cookie Monster</a>, which won the Honorable Mention for Distinguished Artifact.
+                  </li>
+                  <li>
+                    At the <a href="https://cs3-erc.org/" target="_blank">CS3</a> NSF site visit
+                    day workshop, our work received unanimous top-band rating.
+                  </li>
+                  <li>
+                    <a href="https://www.w3.org/2022/08/PROPOSED-PATWG-charter.html" target="_blank"
+                      >PATWG</a
+                    >
+                    preliminarily approved adopting this work to their standardization, considered
+                    by major browsers including Firefox and Chrome.
+                  </li>
+                </ul>
+              </details>
             </li>
           </ul>
         </div>
@@ -148,15 +153,20 @@
           </div>
           <ul class="notes">
             <li>
-              <p>We prove a nearly tight \(\Omega(n^{1/2-c})\) lower bound for adaptive monotonicity testing of Boolean functions, which moved the lower bound that's been stuck for 10 years, solving an open problem standing for 30 years. We did so based on successfully breaking the barrier of the last construction into a constant number of levels (previous attempts fail to change the lower bound due to trivial attacks).</p>
-              <p>I contributed by proving most of the intermediate claims in the good case, as well as the good-outcome induction that bounds layer-by-layer information leakage in the new construction. I also took the initiative to prove a first version of the adaptivity hierarchy lower bound, where the construction gives tight bounds for any constant round of adaptivity.</p>
-              <p>The same construction and similar proofs also settle, up to a sub-polynomial gap, the complexity of testing both monotonicity and unateness in the relative-error model.</p>
+              <details class="note-fold">
+                <summary>Details &amp; Contributions</summary>
+                <p>We prove a nearly tight \(\Omega(n^{1/2-c})\) lower bound for adaptive monotonicity testing of Boolean functions, which moved the lower bound that's been stuck for 10 years, solving an open problem standing for 30 years. We did so based on successfully breaking the barrier of the last construction into a constant number of levels (previous attempts fail to change the lower bound due to trivial attacks).</p>
+                <p>I contributed by proving most of the intermediate claims in the good case, as well as the good-outcome induction that bounds layer-by-layer information leakage in the new construction. I also took the initiative to prove a first version of the adaptivity hierarchy lower bound, where the construction gives tight bounds for any constant round of adaptivity.</p>
+                <p>The same construction and similar proofs also settle, up to a sub-polynomial gap, the complexity of testing both monotonicity and unateness in the relative-error model.</p>
+              </details>
             </li>
             <li>
-              Fun Facts
-              <ul>
-                <li>Mentioned in <a href="https://www.wisdom.weizmann.ac.il/~oded/MC/421.html" target="_blank">Professor Oded Goldreich's selection</a> of property testing papers.</li>
-              </ul>
+              <details class="note-fold">
+                <summary>Fun Facts</summary>
+                <ul>
+                  <li>Mentioned in <a href="https://www.wisdom.weizmann.ac.il/~oded/MC/421.html" target="_blank">Professor Oded Goldreich's selection</a> of property testing papers.</li>
+                </ul>
+              </details>
             </li>
           </ul>
         </div>
