@@ -131,6 +131,7 @@ div.paper div.title {
   font-size: 1.1em;
   margin-bottom: 5px;
   font-weight: 700;
+  line-height: 30px; /* Match .paper-num badge height so the badge's vertical center aligns with the title's first-line center. */
 }
 
 div.paper div.title a {
@@ -142,6 +143,7 @@ div.paper div.authors-and-venue {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: baseline; /* Line up the venue-badge's first-line baseline with the authors' first-line baseline (they use different fonts). */
 }
 
 div.paper div.authors-and-venue div.authors {
