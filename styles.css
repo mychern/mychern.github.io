@@ -499,6 +499,18 @@ li { margin-bottom: 6px; }
     background-color: #faf8f5;
     z-index: 10;
   }
+  /* Cap above the stuck panel: covers the strip up to the screen top (body margin,
+     iOS URL-bar transitions) and the side gutters (8px body margin + 20px container padding),
+     so content never shows through there while scrolling. */
+  .sidebar::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -28px;
+    right: -28px;
+    height: 100px;
+    background-color: #faf8f5;
+  }
   .sidebar .nav-items { flex-direction: row; flex-wrap: wrap; width: 100%; }
   .sidebar .nav-items .nav-item {
     border-right: none;
