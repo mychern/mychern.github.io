@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#faf8f5" />
     <meta
       name="google-site-verification"
       content="xvD194KsBxeaW40tr48z5nGiEF-zbgEgpTNHhK2AMu8"
@@ -606,6 +607,17 @@
         navItems[id] = document.querySelector(`.nav-item a[href="#${id}"]`).parentElement;
       });
 
+      // Phone view: expose the floating panel's height so CSS scroll-padding-top can keep
+      // anchor jumps below it (the height varies with how the tabs wrap).
+      const sidebarEl = document.querySelector('.sidebar');
+      const phoneView = window.matchMedia('(max-width: 680px)');
+      function setPanelHeight() {
+        document.documentElement.style.setProperty('--panel-h', sidebarEl.offsetHeight + 'px');
+      }
+      setPanelHeight();
+      window.addEventListener('load', setPanelHeight);
+      window.addEventListener('resize', setPanelHeight);
+
       function updateActive() {
         const nearBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - window.innerHeight * 0.1;
         if (nearBottom) {
@@ -613,9 +625,11 @@
           navItems['misc'].classList.add('active-nav-item');
           return;
         }
+        // In phone view a section counts as current once its heading passes under the panel.
+        const threshold = phoneView.matches ? sidebarEl.getBoundingClientRect().bottom + 12 : 80;
         let current = sections[0];
         for (const id of sections) {
-          if (document.getElementById(id).getBoundingClientRect().top <= 80) {
+          if (document.getElementById(id).getBoundingClientRect().top <= threshold) {
             current = id;
           }
         }

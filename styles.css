@@ -10,6 +10,9 @@ body {
   font-size: 16px;
   color: #494e52;
   background-color: #faf8f5;
+  /* With viewport-fit=cover the page extends under the notch in landscape; these are 0 elsewhere. */
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
 }
 
 a { text-decoration: none; color: #8C1515; }
@@ -495,13 +498,14 @@ li { margin-bottom: 6px; }
     margin-right: 0;
     margin-bottom: 24px;
     top: 0;
+    top: env(safe-area-inset-top, 0px); /* stick just below the phone's status bar; the ::before cap paints that band */
     padding: 10px 0 6px;
     background-color: #faf8f5;
     z-index: 10;
   }
-  /* Cap above the stuck panel: covers the strip up to the screen top (body margin,
-     iOS URL-bar transitions) and the side gutters (8px body margin + 20px container padding),
-     so content never shows through there while scrolling. */
+  /* Cap above the stuck panel: with viewport-fit=cover the page reaches the physical top of the
+     screen, so this covers the status-bar band plus the side gutters (8px body margin + 20px
+     container padding). Content never shows through above the panel while scrolling. */
   .sidebar::before {
     content: '';
     position: absolute;
@@ -511,6 +515,10 @@ li { margin-bottom: 6px; }
     height: 100px;
     background-color: #faf8f5;
   }
+  /* Land anchor jumps below the floating panel.
+     --panel-h is the panel's measured height, set by the inline script in index.html. */
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + var(--panel-h, 130px) + 8px); }
+
   .sidebar .nav-items { flex-direction: row; flex-wrap: wrap; width: 100%; }
   .sidebar .nav-items .nav-item {
     border-right: none;
