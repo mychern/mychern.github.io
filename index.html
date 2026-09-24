@@ -54,7 +54,7 @@
           I'm broadly interested in formalizing and modularizing trust in massive (agentic) systems. As of now, I'm actively thinking about:
         </p>
         <ul>
-          <li>Client-side privacy in efficient LLM serving (where known side-channel attacks exploit optimizations such as shared KV caching to reconstruct users' prompts) via oblivious memory access techniques and the growing capability of personal devices to host smaller models that take over preprocessing tasks, so that a compromised cloud provider hosting larger models cannot reconstruct sensitive information.</li>
+          <li>Client-side privacy in efficient LLM serving (where known side-channel attacks exploit optimizations such as shared KV caching to reconstruct users' prompts) via oblivious memory access techniques and the growing capability of personal devices to host smaller models that take over preprocessing tasks, so that a compromised cloud provider hosting larger models cannot recover sensitive user information.</li>
           <li>Verifiable properties of AI agents (limits at which modern cloud service telemetry fails to stop malicious agents, confidential certified runtime introspection, and privacy-preserving code audits) via TEEs and cryptography.</li>
           <li>Split-trust custody of users' personal knowledge bases, so that an AI agent can still accomplish useful tasks that fit a person's personal needs, while no single cloud, model provider, or device knows enough about the person to cause harm.</li>
         </ul>
